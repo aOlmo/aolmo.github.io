@@ -2,5 +2,6 @@
     <li *ngFor="let publ of publications" class="publ"><span class="fa-li"><i class="fas fa-file-alt"></i></span>
         <a href="{{publ['download']}}">{{publ["Title"]}}</a>
         {{publ["Authors"]}}
+        <br>
     </li>
 </ul>

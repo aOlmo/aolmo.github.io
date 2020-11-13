@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'courses',
-  templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css', '../../font-awesome/css/all.min.css']
+  selector: 'publications',
+  templateUrl: './publications.component.html',
+  styleUrls: ['./publications.component.css', '../../font-awesome/css/all.min.css']
 })
-export class CoursesComponent {
+export class PublicationsComponent {
   // https://csvjson.com/csv2json
   publications = [
     {

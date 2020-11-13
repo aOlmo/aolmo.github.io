@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'courses',
     template: '<h2>Courses</h2>'
 })
-export class CoursesComponent {
+export class PublicationsComponent {
 
 }
