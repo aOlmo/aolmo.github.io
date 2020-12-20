@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'exp',
   templateUrl: './exp.component.html',
-  styleUrls: ['./exp.component.css']
+  styleUrls: ['../../stylesheets/styles.css', '../../stylesheets/pygment_trac.css', './exp.component.css']
 })
 
 export class ExpComponent {
@@ -12,7 +12,7 @@ export class ExpComponent {
       "title": "Research Assistant at ASU",
       "dates": ["08/2018", "Present"],
       "place": "Arizona State University",
-      "descr": "Research Assistant in the Planning and Artificial Intelligence lab under the supervision of professor Subbarao Kambhampati at Arizona State University."
+      "descr": "I am a Research Assistant in the Planning and Artificial Intelligence lab under the supervision of professor Subbarao Kambhampati at Arizona State University."
     },
     {
       "title": "Research Assistant at UAB",

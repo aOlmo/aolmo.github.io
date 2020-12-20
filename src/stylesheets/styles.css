@@ -1,15 +1,4 @@
-
-.right-date{
-  float: right;
-}
-
-li {
-  position: relative;
-  left: -10px;
-}
-
 body {
-  background-color: #fff;
   padding:40px;
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color:#595959;
@@ -18,7 +7,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 20px;
+  margin:0 0 10px;
 }
 
 p, ul, ol, table, pre, dl {
