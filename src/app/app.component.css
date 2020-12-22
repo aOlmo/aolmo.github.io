@@ -1,6 +1,6 @@
 .card{
   display: block;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-bottom: 10%;
   margin-left: auto;
   margin-right: auto;
@@ -36,12 +36,14 @@
   }
   
   .logo {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+    text-align: center;
     
     font-family: Agustina;
     font-weight: bold;
-    width: 100%;
   
     margin: auto;
     padding: 10px;
