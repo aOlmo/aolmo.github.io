@@ -3,9 +3,9 @@
 </header>
 <ul>
     <li *ngFor="let honor of honors" class="honor">
-        <b>{{honor["title"]}}</b> <span class="dates"> {{honor["dates"][0]}} 
+        <b [innerHTML]="honor['title']"></b> <span class="dates"> {{honor["dates"][0]}} 
             <span *ngIf="honor['dates'][1].length >0">~</span> {{honor["dates"][1]}} </span> <br>
-        {{honor["descr"]}}
+            <span [innerHTML]="honor['descr']"></span>
         <br><br>
     </li>
 </ul>
