@@ -10,9 +10,9 @@ export class ExpComponent {
   exps = [
     {
       "title": "Research Assistant at ASU",
-      "dates": ["Aug 2018", "May 2023"],
+      "dates": ["Aug 2018", "Present"],
       "place": "Arizona State University",
-      "descr": "I am a Research Assistant at the <a href='https://yochan-lab.github.io/home/'> Planning and Artificial Intelligence lab </a> under the supervision of professor Subbarao Kambhampati at Arizona State University."
+      "descr": "I am a Research Assistant at the <a href='https://yochan-lab.github.io/home/'> Planning and Artificial Intelligence lab </a> under the supervision of professor <a href='http://rakaposhi.eas.asu.edu/'>Subbarao Kambhampati</a> at Arizona State University."
     },
     {
       "title": "Research Assistant at UAB",
