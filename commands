@@ -1,0 +1,2 @@
+ng serve
+ng deploy --base-href=aolmo.github.io --message=""
