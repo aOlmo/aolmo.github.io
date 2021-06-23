@@ -9,7 +9,7 @@ export class HonorsComponent {
 
   honors = [
     {
-      "title": "<a href='https://uccs.edu/balsellseng/'>Balsells Fellowship</a>",
+      "title": "<a href='https://eas.uccs.edu/academic/balsells_graduate'>Balsells Fellowship</a>",
       "dates": ["Aug 2016", "Dec 2017"],
       "place": "University of Colorado at Colorado Springs",
       "descr": "Fellowship that covered in full the tuition of my Computer Science Master's degree at the University of Colorado at Colorado Springs as well as a stipend – only available for a very limited amount of students in Spain every year."
