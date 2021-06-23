@@ -1,5 +1,5 @@
 
-hosted = "https://aolmo.github.io/assets/web/exps/inclusive-gan-mturk/run1/{0}.jpg"
+hosted = "https://aolmo.github.io/assets/web/exps/inclusive-gan-mturk/run2/{0}.jpg"
 
 header = '<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />\
 <section class="container" id="Other" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">\
