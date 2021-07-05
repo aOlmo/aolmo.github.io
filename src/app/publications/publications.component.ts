@@ -9,21 +9,27 @@ export class PublicationsComponent {
   // https://csvjson.com/csv2json
   publications = [
     {
+      "Authors": "Alberto Olmo, Sarath Sreedharan, Subbarao Kambhampati",
+      "Title": "GPT3-to-plan: Extracting plans from text using GPT-3",
+      "Publication": "ICAPS FinPlan & ICAPS KEPS 2021",
+      "download": "https://arxiv.org/abs/2106.07131"
+    },
+    {
+      "Authors": "Niharika Jain, Alberto Olmo, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati",
+      "Title": "Imperfect imaganation: Implications of gans exacerbating biases on facial data augmentation and snapchat selfie lenses",
+      "Publication": "ICLR SDG 2021",
+      "download": "https://arxiv.org/pdf/2001.09528"
+    },
+    {
       "Authors": "Alberto Olmo, Sailik Sengupta, Subbarao Kambhampati",
       "Title": "Not all Failure Modes are Created Equal: Training Deep Neural Networks for Explicable (Mis) Classification",
       "Publication": "arXiv preprint arXiv:2006.14841",
       "download": "https://arxiv.org/pdf/2006.14841"
     },
     {
-      "Authors": "Niharika Jain, Alberto Olmo, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati",
-      "Title": "Imperfect imaganation: Implications of gans exacerbating biases on facial data augmentation and snapchat selfie lenses",
-      "Publication": "arXiv preprint arXiv:2001.09528",
-      "download": "https://arxiv.org/pdf/2001.09528"
-    },
-    {
       "Authors": "Sarath Sreedharan, Alberto Olmo, Aditya Prasad Mishra, Subbarao Kambhampati",
       "Title": "Model-free model reconciliation",
-      "Publication": "arXiv preprint arXiv:1903.07198",
+      "Publication": "IJCAI 2019",
       "download": "https://arxiv.org/pdf/1903.07198.pdf"
     },
     {
