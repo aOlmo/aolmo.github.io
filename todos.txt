@@ -1,6 +1,8 @@
 - DONE: Change font: Make larger and better -- also justify text 
 - DONE: Change name font type
 - DONE~: Solve overall website width problem
+- Make visit counter
+- Add proper src links to posters.
 - Education section put University Logos instead
 - Improve list icons of Experience and honors sections -- Fix Bootstrap link issue
 - Put job logos as well.

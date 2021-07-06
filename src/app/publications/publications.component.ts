@@ -19,14 +19,14 @@ export class PublicationsComponent {
       "Title": "Imperfect ImaGANation",
       "Publication": "ICLR SDG, 2021",
       "Download": "https://arxiv.org/pdf/2001.09528",
-      "Poster": "https://aolmo.github.io/files/imaganation_iclr_poster.pdf"
+      "Poster": "https://aolmo.github.io/assets/files/imaganation_iclr_poster.pdf"
     },
     {
       "Authors": "Alberto Olmo, Sailik Sengupta, Subbarao Kambhampati",
       "Title": "Not all Failure Modes are Created Equal: Training Deep Neural Networks for Explicable (Mis) Classification",
       "Publication": "ICML UDL and ICML HILL, 2020",
       "Download": "https://arxiv.org/pdf/2006.14841",
-      "Poster": "https://aolmo.github.io/files/wlf_icml_poster.pdf"
+      "Poster": "https://aolmo.github.io/assets/files/wlf_icml_poster.pdf"
     },
     {
       "Authors": "Sarath Sreedharan, Alberto Olmo, Aditya Prasad Mishra, Subbarao Kambhampati",
