@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: inherit;
-  width: 90%; 
+  width: 100%; 
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
 
 .me{
     display: block;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 15px 30px rgba(59, 43, 91, 0.7);
     margin-left: auto;
     margin-right: auto;
