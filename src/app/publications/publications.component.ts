@@ -11,25 +11,26 @@ export class PublicationsComponent {
     {
       "Authors": "Alberto Olmo, Sarath Sreedharan, Subbarao Kambhampati",
       "Title": "GPT3-to-plan: Extracting plans from text using GPT-3",
-      "Publication": "ICAPS FinPlan & ICAPS KEPS 2021",
+      "Publication": "ICAPS FinPlan and ICAPS Knowledge Engineering, 2021",
       "Download": "https://arxiv.org/abs/2106.07131"
     },
     {
       "Authors": "Niharika Jain, Alberto Olmo, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati",
-      "Title": "Imperfect imaganation: Implications of gans exacerbating biases on facial data augmentation and snapchat selfie lenses",
-      "Publication": "ICLR SDG 2021",
+      "Title": "Imperfect ImaGANation: Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Selfie Lenses",
+      "Publication": "ICLR SDG, 2021",
       "Download": "https://arxiv.org/pdf/2001.09528"
     },
     {
       "Authors": "Alberto Olmo, Sailik Sengupta, Subbarao Kambhampati",
       "Title": "Not all Failure Modes are Created Equal: Training Deep Neural Networks for Explicable (Mis) Classification",
-      "Publication": "",
-      "Download": "https://arxiv.org/pdf/2006.14841"
+      "Publication": "ICML Workshop on Uncertainty and Robustness in Deep Learning (UDL) and Human-In-the-Loop Learning (HILL), 2020",
+      "Download": "https://arxiv.org/pdf/2006.14841",
+      "Poster": "https://aolmo.github.io/files/wlf_poster_icml.pdf"
     },
     {
       "Authors": "Sarath Sreedharan, Alberto Olmo, Aditya Prasad Mishra, Subbarao Kambhampati",
       "Title": "Model-free model reconciliation",
-      "Publication": "IJCAI 2019",
+      "Publication": "IJCAI, 2019",
       "Download": "https://arxiv.org/pdf/1903.07198.pdf"
     },
     {
@@ -41,7 +42,7 @@ export class PublicationsComponent {
     {
       "Authors": "Zahra Zahedi, Alberto Olmo, Tathagata Chakraborti, Sarath Sreedharan, Subbarao Kambhampati",
       "Title": "Towards understanding user preferences for explanation types in model reconciliation",
-      "Publication": "2019 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI)",
+      "Publication": "International Conference on Human-Robot Interaction (HRI), 2019",
       "Download": "https://ieeexplore.ieee.org/abstract/document/8673097"
     },
     {

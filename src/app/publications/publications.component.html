@@ -1,15 +1,14 @@
 <ul class="fa-ul">
     <li *ngFor="let publ of publications" class="publ"><span class="fa-li"><i class="fas fa-file-alt"></i></span>
-        <a href="{{publ['Download']}}">{{publ["Title"]}}</a>
+        <a href="{{publ['Download']}}">{{publ["Title"]}}</a> 
+            <span *ngIf="publ['Download']"> · <span class="badge badge-info"><a href="publ['Download']">Paper</a></span></span> 
+            <span *ngIf="publ['Poster']"> · <span class="badge badge-primary"><a href="publ['Poster']">Poster</a></span></span> 
         <br>
             <span *ngFor="let name of publ['Authors'].split(','); let i = index"> 
                 <span *ngIf="name.includes('Alberto Olmo'); else elseBlock"><b> {{name}}</b></span>
-                <ng-template #elseBlock> {{name}}</ng-template> <span *ngIf="i<publ['Authors'].split(',').length-1">,</span>
+                <ng-template #elseBlock> {{name}}</ng-template> <span *ngIf="i < publ['Authors'].split(',').length-1">,</span>
             </span>
         <br>
-        <span>{{publ['Publication']}}</span>
-        <br *ngIf="publ['Publication']">
-        <button *ngIf="publ['Poster']" type="button" class="btn btn-outline-primary">Poster</button> 
-        <br>
+        <span *ngIf="publ['Publication']">{{publ['Publication']}}</span>
     </li>
 </ul>

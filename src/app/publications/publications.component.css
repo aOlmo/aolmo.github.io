@@ -3,6 +3,10 @@
     margin-left: -10px;
 }
 
+.badge a {
+    color: whitesmoke;
+}
+
 a {
     text-decoration: none;
 }
