@@ -14,6 +14,7 @@ body{
   font-size: 16;
   text-align: justify;
   text-justify: inter-word;
+  background-color: #eef2f3;
 }
 
 .card{
@@ -58,7 +59,7 @@ body{
   /* font-weight: bold; */
 
   margin: auto;
-  padding: 8px 0 8px 0;
+  padding: 0 0 18px 0;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
