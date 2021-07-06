@@ -1,10 +1,7 @@
-<header>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</header>
 <ul>
-    <li *ngFor="let honor of honors" class="honor">
+    <li *ngFor="let honor of honors" class="honor"><span class="fa-li"><i class="far fa-file-alt"></i></span>
         <b [innerHTML]="honor['title']"></b> <span class="dates"> {{honor["dates"][0]}} 
-            <span *ngIf="honor['dates'][1].length >0">~</span> {{honor["dates"][1]}} </span> <br>
+            <span *ngIf="honor['dates'][1].length >0">-</span> {{honor["dates"][1]}} </span> <br>
             <span [innerHTML]="honor['descr']"></span>
         <br><br>
     </li>
