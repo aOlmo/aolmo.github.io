@@ -1,10 +1,15 @@
-- DONE: Change font: Make larger and better -- also justify text 
+- Solve UAB bug so that we dont need to have padding
+- Solve no Bootstrap problem in Experience and Honors sections
+- Improve list icons of Experience and honors sections -- Fix Bootstrap link issue
+- Put job logos as well.
+- Add icons in each section? DONE: Change font: Make larger and better -- also justify text 
+- Wrap university logos with a box
+
 - DONE: Change name font type
 - DONE~: Solve overall website width problem
 - DONE: Make visit counter
 - DONE: Add proper src links to posters.
-- Education section put University Logos instead
-- Improve list icons of Experience and honors sections -- Fix Bootstrap link issue
-- Put job logos as well.
-- Reduce Favicon width
-- Add icons in each section?
+- DONE: Education section put University Logos instead
+- DONE: Reduce Favicon width
+
+

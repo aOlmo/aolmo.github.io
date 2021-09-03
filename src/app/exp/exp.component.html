@@ -1,6 +1,6 @@
 <ul class="list">
     <li *ngFor="let exp of exps" class="exp">
-        <b>{{exp["title"]}}</b> <span class="dates">{{exp["dates"][0]}} - {{exp["dates"][1]}} </span> <br>
+        <b>{{exp["title"]}}</b> <span class="badge badge-light dates">{{exp["dates"][0]}} - {{exp["dates"][1]}} </span> <br>
         <div [innerHTML]="exp['descr']"></div>
         <br>
     </li>
