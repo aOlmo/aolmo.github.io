@@ -11,7 +11,7 @@ export class PublicationsComponent {
     {
       "Authors": "Niharika Jain*, Alberto Olmo*, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati",
       "Title": "Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Face Lenses",
-      "Publication": "Artificial Intelligence Journal, 2021",
+      "Publication": "Artificial Intelligence Journal, 2022",
       "Download": "https://www.sciencedirect.com/science/article/abs/pii/S0004370221002034"
     },
     {
