@@ -22,7 +22,7 @@ export class HonorsComponent {
     },
     {
       "title": "Baccalaureate with Honors",
-      "dates": ["Jun 2016", ""],
+      "dates": ["Jun 2012", ""],
       "place": "IES La Romànica",
       "descr": "Undergraduate grant that paid for the first year of my degree in Computer Science at Universitat Autònoma de Barcelona – Best student of 2012 of IES La Romànica"
     },

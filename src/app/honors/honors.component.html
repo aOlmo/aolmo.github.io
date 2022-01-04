@@ -1,6 +1,6 @@
 <ul>
     <li *ngFor="let honor of honors" class="honor"><span class="fa-li"><i class="far fa-file-alt"></i></span>
-        <b [innerHTML]="honor['title']"></b> <span class="dates"> {{honor["dates"][0]}} 
+        <b [innerHTML]="honor['title']"></b> <span class="badge badge-light dates"> {{honor["dates"][0]}} 
             <span *ngIf="honor['dates'][1].length >0">-</span> {{honor["dates"][1]}} </span> <br>
             <span [innerHTML]="honor['descr']"></span>
         <br><br>
