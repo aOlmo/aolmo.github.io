@@ -15,13 +15,13 @@ export class ExpComponent {
       "descr": "I worked as a business analyst applying Machine Learning algorithms to model and categorize user-segmentation-related tasks with graph and tabular data."
     },
     {
-      "title": "Research Assistant @ ASU",
+      "title": "Graduate Research Assistant @ ASU",
       "dates": ["Aug 2018", "Present"],
       "place": "Arizona State University",
       "descr": "I am a Research Assistant at the <a href='https://yochan-lab.github.io/home/'> Planning and Artificial Intelligence lab </a> under the supervision of professor <a href='http://rakaposhi.eas.asu.edu/'>Subbarao Kambhampati</a> at Arizona State University."
     },
     {
-      "title": "Research Assistant @ UAB",
+      "title": "Graduate Research Assistant @ UAB",
       "dates": ["Jan 2018", "Jun 2018"],
       "place": "Universitat Autónoma de Barcelona",
       "descr": "I worked as a Research Assistant developing the toolchain for the <a href='https://github.com/HPCA4SE-UAB/MATE'> Monitoring Analysis and Tuning Environment</a> (MATE) software at Universitat Autònoma de Barcelona."
