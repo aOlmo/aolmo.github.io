@@ -28,7 +28,7 @@ export class PublicationsComponent {
       "Poster": "https://aolmo.github.io/assets/files/imaganation_iclr_poster.pdf"
     },
     {
-      "Authors": "Alberto Olmo, Sailik Sengupta, Subbarao Kambhampati",
+      "Authors": "Alberto Olmo*, Sailik Sengupta*, Subbarao Kambhampati",
       "Title": "Training Deep Neural Networks for Explicable (Mis)Classification",
       "Publication": "ICML UDL and ICML HILL, 2020",
       "Download": "https://arxiv.org/pdf/2006.14841",
