@@ -9,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class ExpComponent {
   exps = [
     {
+      "title": "Machine Learning Research Intern @ National Renewable Energy Laboratory",
+      "dates": ["May 2022", "Aug 2022"],
+      "place": "National Renewable Energy Laboratory",
+      "descr": "I work improving and researching about the explainability of machine learning data flow models as well as their proneness to bias their predictions."
+    },
+    {
       "title": "Business Analytics/Statistics Intern @ University of Phoenix",
       "dates": ["May 2021", "Aug 2021"],
       "place": "University of Phoenix",
-      "descr": "I worked as a business analyst applying Machine Learning algorithms to model and categorize user-segmentation-related tasks with graph and tabular data."
+      "descr": "I worked as a business analyst applying machine learning algorithms to model and categorize user-segmentation-related tasks with graph and tabular data."
     },
     {
       "title": "Graduate Research Assistant @ ASU",
