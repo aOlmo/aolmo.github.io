@@ -153,25 +153,36 @@ def main():
         sys.exit("SCHOLAR_USER is not set")
 
     profile_url = f"{BASE}/citations?user={urllib.parse.quote(user)}&hl=en"
-    pubs, start = [], 0
-    while True:
-        body = fetch(f"{profile_url}&cstart={start}&pagesize={PAGE_SIZE}&sortby=citedby")
-        rows = parse_profile(body)
-        pubs.extend(rows)
-        if len(rows) < PAGE_SIZE:
-            break
-        start += PAGE_SIZE
-        time.sleep(random.uniform(3, 6))
-
-    if not pubs:
-        sys.exit("Parsed 0 publications; the page layout may have changed. Not updating.")
-    print(f"Found {len(pubs)} publications on the profile.")
 
     old = None
     if os.path.exists(out_path):
         with open(out_path, encoding="utf-8") as f:
             old = json.load(f)
     previous = {p["scholar_url"]: p for p in (old or {}).get("publications", [])}
+
+    scholar_ok = True
+    pubs, start = [], 0
+    try:
+        while True:
+            body = fetch(f"{profile_url}&cstart={start}&pagesize={PAGE_SIZE}&sortby=citedby")
+            rows = parse_profile(body)
+            pubs.extend(rows)
+            if len(rows) < PAGE_SIZE:
+                break
+            start += PAGE_SIZE
+            time.sleep(random.uniform(3, 6))
+    except Blocked as e:
+        if not (old and old.get("user") == user and old.get("publications")):
+            raise
+        # Keep the last good list, but still fill in paper links below.
+        print(f"::warning::Google Scholar blocked the request ({e}). "
+              "Keeping the previous publication list; only refreshing paper links.")
+        scholar_ok = False
+        pubs = [dict(p) for p in old["publications"]]
+
+    if not pubs:
+        sys.exit("Parsed 0 publications; the page layout may have changed. Not updating.")
+    print(f"{'Found' if scholar_ok else 'Kept'} {len(pubs)} publications.")
 
     for p in pubs:
         time.sleep(1.5)  # stay well under Semantic Scholar's public rate limit
@@ -192,7 +203,8 @@ def main():
     data = {
         "user": user,
         "profile_url": profile_url,
-        "updated": datetime.date.today().isoformat(),
+        # Date of the last successful read of the Scholar profile.
+        "updated": datetime.date.today().isoformat() if scholar_ok else old["updated"],
         "publications": pubs,
     }
     with open(out_path, "w", encoding="utf-8") as f:
