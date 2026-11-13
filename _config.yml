@@ -1,0 +1,15 @@
+title: Alberto Olmo
+description: >-
+  Alberto Olmo is a Computer Science Ph.D. candidate at Arizona State University
+  researching explainability of machine learning models and data biases.
+url: https://aolmo.github.io
+baseurl: ""
+email: aolmoher@asu.edu
+google_analytics: G-PLK10WWTXE
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/

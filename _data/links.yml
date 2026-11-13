@@ -1,0 +1,13 @@
+# Sidebar "Links" card. `icon` is a file in _includes/icons/ (without .svg).
+- label: Google Scholar
+  url: https://scholar.google.com/citations?user=qIYCV4sAAAAJ&hl=en
+  icon: graduation-cap
+- label: LinkedIn
+  url: https://www.linkedin.com/in/alberto-olmo/
+  icon: linkedin
+- label: GitHub
+  url: https://github.com/aOlmo
+  icon: github
+- label: Yochan Lab
+  url: https://yochan-lab.github.io/home/
+  icon: flask

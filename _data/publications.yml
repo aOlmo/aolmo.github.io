@@ -1,0 +1,43 @@
+# Newest first. Authors are comma-separated; "Alberto Olmo" is shown in bold.
+# Optional fields: venues, paper, preprint, poster.
+- title: Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Face Lenses
+  authors: Niharika Jain*, Alberto Olmo*, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati
+  venues:
+    - Artificial Intelligence Journal, 2022
+    - ICLR SDG, 2021
+  paper: https://www.sciencedirect.com/science/article/abs/pii/S0004370221002034
+  preprint: https://arxiv.org/pdf/2001.09528
+  poster: /assets/files/imaganation_iclr_poster.pdf
+
+- title: "GPT3-to-plan: Extracting plans from text using GPT-3"
+  authors: Alberto Olmo, Sarath Sreedharan, Subbarao Kambhampati
+  venues: ["ICAPS FinPlan and ICAPS KEPS, 2021"]
+  paper: https://arxiv.org/abs/2106.07131
+
+- title: Training Deep Neural Networks for Explicable (Mis)Classification
+  authors: Alberto Olmo*, Sailik Sengupta*, Subbarao Kambhampati
+  venues: ["ICML UDL and ICML HILL, 2020"]
+  paper: https://arxiv.org/pdf/2006.14841
+  poster: /assets/files/wlf_icml_poster.pdf
+
+- title: Model-free Model Reconciliation
+  authors: Sarath Sreedharan, Alberto Olmo, Aditya Prasad Mishra, Subbarao Kambhampati
+  venues: ["IJCAI, 2019"]
+  paper: https://arxiv.org/pdf/1903.07198.pdf
+
+- title: "Imagining an Engineer: On GAN-based Data Augmentation Perpetuating Biases"
+  authors: Niharika Jain, Lydia Manikonda, Alberto Olmo, Sailik Sengupta, Subbarao Kambhampati
+  paper: https://arxiv.org/pdf/1811.03751.pdf
+
+- title: Towards Understanding User Preferences for Explanation Types in Model Reconciliation
+  authors: Zahra Zahedi*, Alberto Olmo*, Tathagata Chakraborti, Sarath Sreedharan, Subbarao Kambhampati
+  venues: ["International Conference on Human-Robot Interaction, 2019"]
+  paper: https://ieeexplore.ieee.org/abstract/document/8673097
+
+- title: Autoregressive Density Estimation in Latent Spaces
+  authors: Alberto Olmo
+  paper: https://www.proquest.com/openview/2d590fc9f66d3ed64ef47b83e8f35a6a/1?pq-origsite=gscholar&cbl=18750
+
+- title: Extending MPI Parameters' Plugin
+  authors: Alberto Olmo
+  paper: https://ddd.uab.cat/pub/tfg/2016/tfg_39376/Extending_PTFs_MPI_Parameters_plugin_-_Alberto_Olmo.pdf

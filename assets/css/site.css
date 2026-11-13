@@ -1,0 +1,173 @@
+/* Styles for aolmo.github.io. Icons: Font Awesome Free 5.15.4 (CC BY 4.0). */
+
+@font-face {
+  font-family: "Computer Modern";
+  src: url("../fonts/computer-modern.woff2") format("woff2");
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: #eef2f3;
+  color: #595959;
+  font: 16px/1.5 "Computer Modern", Georgia, "Times New Roman", serif;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #222;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+p, ul { margin: 0 0 20px; }
+b { font-weight: bolder; }
+img { max-width: 100%; height: auto; vertical-align: middle; }
+
+a { color: #39c; text-decoration: none; }
+a:hover { color: #069; text-decoration: underline; }
+
+hr {
+  border: 0;
+  background: #e5e5e5;
+  height: 1px;
+  margin: 0 0 20px;
+}
+
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  vertical-align: -0.125em;
+}
+
+/* ---- Layout: sidebar + main column (stacks below 992px) ---- */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 576px)  { .container { max-width: 540px; } }
+@media (min-width: 768px)  { .container { max-width: 720px; } }
+@media (min-width: 992px)  { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+
+.row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.col-sidebar, .col-main { width: 100%; padding: 0 15px; }
+@media (min-width: 992px) {
+  .col-sidebar { flex: 0 0 25%; max-width: 25%; }
+  .col-main { flex: 0 0 75%; max-width: 75%; }
+}
+
+/* ---- Sidebar ---- */
+
+.logo {
+  display: block;
+  padding: 0 0 18px;
+  color: #222;
+  font-size: 28px;
+  line-height: 1.1;
+  text-align: center;
+  transition: text-shadow 0.2s ease-out;
+}
+.logo:hover {
+  color: #222;
+  text-decoration: none;
+  text-shadow: 0 20px 50px rgba(59, 43, 91, 0.7);
+  transition: text-shadow 0.5s ease-in;
+}
+.ltgt { color: #009926; }
+
+.me {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 15px 30px rgba(59, 43, 91, 0.7);
+}
+
+.card {
+  margin: 20% auto 10%;
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.card-title {
+  margin: 0 0 10px;
+  color: #494949;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* ---- Badges ---- */
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+a.badge:hover { text-decoration: none; filter: brightness(0.9); }
+.badge-light     { color: #212529; background: #f8f9fa; }
+.badge-info      { color: #fff; background: #17a2b8; }
+.badge-secondary { color: #fff; background: #6c757d; }
+.badge-primary   { color: #fff; background: #007bff; }
+a.badge-info:hover, a.badge-secondary:hover, a.badge-primary:hover { color: #fff; }
+
+/* ---- Education ---- */
+
+.schools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.school {
+  width: 100%;
+  padding: 1rem 15px;
+  text-align: center;
+}
+@media (min-width: 768px) { .school { flex: 0 0 33.333%; max-width: 33.333%; } }
+.school img { display: block; max-width: 70%; margin: 0 auto 1.5em; }
+.school img.logo-pad { padding-top: 3rem; }
+
+/* ---- Experience, honors, publications ---- */
+
+.entries { padding-left: 15px; }
+.entries li { margin-bottom: 1.5em; }
+.dates { float: right; margin-left: 0.5em; }
+
+.publications { list-style: none; padding-left: 20px; }
+.publications li { position: relative; margin-bottom: 1.5em; }
+.publications li > .icon {
+  position: absolute;
+  left: -1.6em;
+  top: 0.25em;
+  color: #595959;
+}
+
+/* ---- Small screens ---- */
+
+@media (max-width: 480px) {
+  body { padding: 15px; }
+  .dates { float: none; display: table; margin: 0.25em 0 0; }
+}
+
+@media print {
+  body { padding: 0.4in; background: #fff; font-size: 12pt; color: #444; }
+  .me, .card { display: none; }
+}

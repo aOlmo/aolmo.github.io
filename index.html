@@ -1,15 +1,68 @@
-<script src="runtime.acf0dec4155e77772545.js" defer></script><script src="polyfills.35a5ca1855eb057f016a.js" defer></script><script src="main.7d40ae0ea797b9ad6b87.js" defer></script><html>
-  <head><base href="aolmo.github.io">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLK10WWTXE"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+---
+layout: default
+---
+<h1>Hello!</h1>
+<p>
+  My name is <b>Alberto Olmo</b>, I am a fourth year Computer Science Ph.D. candidate at
+  <a href="https://www.asu.edu/">Arizona State University</a> under the supervision of prof.
+  <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a> at the
+  <a href="https://yochan-lab.github.io/home/">Yochan lab</a>. Previously, I obtained a Master of Science
+  in Computer Science at the <a href="https://www.uccs.edu/">University of Colorado at Colorado Springs</a>
+  and a Bachelor's in Computer Science at <a href="https://www.uab.cat/enginyeria/">Universitat Autònoma de Barcelona</a>.
+</p>
+<p>My broad research interests lie in explainability of machine learning models and data biases.</p>
 
-        gtag('config', 'G-PLK10WWTXE');
-      </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.95441a672e396bcb2918.css"></head>
-    <app-root></app-root>
-</html>
+<h1>Education</h1>
+<hr>
+<div class="schools">
+  {%- for s in site.data.education %}
+  <div class="school">
+    <img src="{{ s.logo }}" alt="{{ s.school }} logo" class="{{ s.logo_class }}" width="360">
+    <div>
+      <b><i>{{ s.school }}</i></b><br>
+      {{ s.degree }}<br>
+      <span class="badge badge-light">{{ s.years }}</span>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+
+<h1>Experience</h1>
+<hr>
+<ul class="entries">
+  {%- for x in site.data.experience %}
+  <li>
+    <b>{{ x.title }}</b> <span class="badge badge-light dates">{{ x.start }} - {{ x.end }}</span>
+    <div>{{ x.description }}</div>
+  </li>
+  {%- endfor %}
+</ul>
+
+<h1>Publications</h1>
+<hr>
+<ul class="publications">
+  {%- for p in site.data.publications %}
+  <li>
+    {% include icons/file-alt.svg %}
+    <a href="{{ p.paper }}">{{ p.title }}</a><br>
+    {%- assign names = p.authors | split: ", " %}
+    {% for n in names %}{% if n contains "Alberto Olmo" %}<b>{{ n }}</b>{% else %}{{ n }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+    {%- if p.venues %}<br>{% for v in p.venues %}<span class="badge badge-light">{{ v }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}
+    {%- if p.paper %} · <a href="{{ p.paper }}" class="badge badge-info">Paper</a>{% endif %}
+    {%- if p.preprint %} · <a href="{{ p.preprint }}" class="badge badge-secondary">arXiv</a>{% endif %}
+    {%- if p.poster %} · <a href="{{ p.poster }}" class="badge badge-primary">Poster</a>{% endif %}
+  </li>
+  {%- endfor %}
+</ul>
+
+<h1>Honors</h1>
+<hr>
+<ul class="entries">
+  {%- for h in site.data.honors %}
+  <li>
+    <b>{% if h.url %}<a href="{{ h.url }}">{{ h.title }}</a>{% else %}{{ h.title }}{% endif %}</b>
+    <span class="badge badge-light dates">{{ h.start }}{% if h.end %} - {{ h.end }}{% endif %}</span>
+    <div>{{ h.description }}</div>
+  </li>
+  {%- endfor %}
+</ul>

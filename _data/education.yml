@@ -1,0 +1,15 @@
+- school: Arizona State University
+  degree: C.S. Ph.D.
+  years: 2018 - 2023
+  logo: /assets/imgs/asu-logo.png
+
+- school: UC Colorado Springs
+  degree: C.S. Master's
+  years: 2016 - 2017
+  logo: /assets/imgs/uc-logo.png
+
+- school: Universitat Autònoma de Barcelona
+  degree: C.S. Bachelor's
+  years: 2012 - 2016
+  logo: /assets/imgs/uab-logo-border-transp.png
+  logo_class: logo-pad

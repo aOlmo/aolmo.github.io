@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description | strip }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="/favicon.ico">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description | strip }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/imgs/me.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preload" href="/assets/fonts/computer-modern.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  {%- if site.google_analytics and jekyll.environment == "production" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {%- endif %}
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <aside class="col-sidebar">
+      <a href="/" class="logo"><span class="ltgt">[ </span>{{ site.title }} <span class="ltgt">]</span></a>
+      <img src="/assets/imgs/me.jpg" alt="Photo of {{ site.title }}" class="me" width="1080" height="1350">
+
+      <div class="card">
+        <h2 class="card-title">Links</h2>
+        <p>{{ site.email }}</p>
+        {%- for link in site.data.links %}
+        <a href="{{ link.url }}">{% include icons/{{ link.icon }}.svg %} {{ link.label }}</a><br>
+        {%- endfor %}
+      </div>
+    </aside>
+    <main class="col-main">
+      {{ content }}
+    </main>
+  </div>
+</div>
+</body>
+</html>
