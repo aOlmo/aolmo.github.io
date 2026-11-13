@@ -84,20 +84,39 @@ def parse_profile(body):
     return rows
 
 
+def _attr(tag, name):
+    m = re.search(r'\b' + name + r'="([^"]*)"', tag)
+    return html.unescape(m.group(1)) if m else None
+
+
 def parse_detail(body):
-    """Links and full author list from a paper's Scholar page."""
+    """Links and full author list from a paper's Scholar page.
+
+    Accepts both the current (gsc_oci_*) and older (gsc_vcd_*) markup, with
+    attributes in any order.
+    """
     out = {}
-    m = re.search(r'<a class="gsc_oci_title_link" href="([^"]+)"', body)
-    if m:
-        out["paper_url"] = html.unescape(m.group(1))
-    m = re.search(r'<div class="gsc_oci_title_ggi">.*?<a href="([^"]+)"', body, re.S)
-    if m:
-        out["pdf_url"] = html.unescape(m.group(1))
+    m = re.search(r'<a\b[^>]*class="[^"]*gsc_(?:oci|vcd)_title_link[^"]*"[^>]*>', body)
+    if m and _attr(m.group(0), "href"):
+        out["paper_url"] = _attr(m.group(0), "href")
+    m = re.search(r'class="[^"]*gsc_(?:oci|vcd)_title_ggi[^"]*"[^>]*>.*?(<a\b[^>]*>)', body, re.S)
+    if m and _attr(m.group(1), "href"):
+        out["pdf_url"] = _attr(m.group(1), "href")
     for field, value in re.findall(
-        r'<div class="gsc_oci_field">(.*?)</div><div class="gsc_oci_value">(.*?)</div>', body, re.S
+        r'class="gsc_(?:oci|vcd)_field"[^>]*>(.*?)</div>\s*<div\b[^>]*class="gsc_(?:oci|vcd)_value"[^>]*>(.*?)</div>',
+        body, re.S,
     ):
         if text(field).lower() in ("authors", "inventors"):
             out["authors"] = text(value)
+    if not out:
+        title = re.search(r"<title>(.*?)</title>", body, re.S)
+        print(f"    debug: nothing parsed from paper page ({len(body)} bytes, "
+              f"title={text(title.group(1)) if title else None!r}, "
+              f"gsc_oci={body.count('gsc_oci')}, gsc_vcd={body.count('gsc_vcd')})")
+        for marker in ("title_link", "title_ggi", "_field"):
+            i = body.find(marker)
+            if i >= 0:
+                print(f"    debug {marker}: {body[max(0, i - 120):i + 200]!r}")
     return out
 
 
