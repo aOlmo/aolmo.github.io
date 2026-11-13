@@ -18,3 +18,8 @@ It is a [Jekyll](https://jekyllrb.com/) site that GitHub Pages builds automatica
 2. Edit the content in `_data/` (education, experience, publications, honors, links)
    or the bio in `index.html`. The branch's README lists which file holds what.
 3. Commit and push. The site updates a minute or two later.
+
+Publications are not edited by hand: the
+[`scholar-sync`](.github/workflows/scholar-sync.yml) workflow on this branch
+reads the Google Scholar profile daily and updates `_data/scholar.json` on
+`gh-pages`. It can also be started from the **Actions** tab.

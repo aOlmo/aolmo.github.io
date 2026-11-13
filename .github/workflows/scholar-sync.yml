@@ -1,0 +1,49 @@
+name: Sync publications from Google Scholar
+
+# Reads the Google Scholar profile and updates _data/scholar.json on the
+# gh-pages branch (the website). Commits only when the list changed.
+on:
+  schedule:
+    - cron: "23 7 * * *"   # daily, 07:23 UTC
+  workflow_dispatch:        # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholar-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SCHOLAR_USER: XsLi7CAAAAAJ
+    steps:
+      - name: Check out the sync script (main)
+        uses: actions/checkout@v4
+        with:
+          path: tools
+
+      - name: Check out the website (gh-pages)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+
+      - name: Fetch publications from Google Scholar
+        run: python3 tools/.github/scripts/scholar_sync.py site/_data/scholar.json
+
+      - name: Commit changes to gh-pages
+        working-directory: site
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Publications unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/scholar.json
+          git commit -m "Update publications from Google Scholar"
+          git push origin HEAD:gh-pages
