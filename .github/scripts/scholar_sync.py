@@ -4,8 +4,10 @@
 Usage: scholar_sync.py OUTPUT_JSON
 
 Reads the profile given by the SCHOLAR_USER environment variable, sorted by
-citations, visits each paper's Scholar page for its links and full author
-list, and writes OUTPUT_JSON (read by Jekyll as site.data.scholar).
+citations (one request to Google Scholar per run, to avoid being blocked),
+looks up each paper on the Semantic Scholar API for a link to the paper (DOI,
+arXiv or open-access PDF) and its full author list, and writes OUTPUT_JSON
+(read by Jekyll as site.data.scholar).
 
 The output file is only rewritten when the publication list actually changed.
 If Scholar blocks the request (CAPTCHA, HTTP error) or the page cannot be
@@ -15,6 +17,7 @@ website keeps showing the last good list.
 Standard library only.
 """
 import datetime
+import difflib
 import html
 import json
 import os
@@ -84,39 +87,60 @@ def parse_profile(body):
     return rows
 
 
-def _attr(tag, name):
-    m = re.search(r'\b' + name + r'="([^"]*)"', tag)
-    return html.unescape(m.group(1)) if m else None
+S2_MATCH = "https://api.semanticscholar.org/graph/v1/paper/search/match"
+S2_FIELDS = "title,url,externalIds,openAccessPdf,authors"
 
 
-def parse_detail(body):
-    """Links and full author list from a paper's Scholar page.
+def normalize(title):
+    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
 
-    Accepts both the current (gsc_oci_*) and older (gsc_vcd_*) markup, with
-    attributes in any order.
-    """
+
+def titles_match(a, b):
+    a, b = normalize(a), normalize(b)
+    return bool(a) and (a == b or difflib.SequenceMatcher(None, a, b).ratio() >= 0.9)
+
+
+def s2_lookup(title, attempts=4):
+    """Paper link and authors from Semantic Scholar, or {} if not found."""
+    url = f"{S2_MATCH}?query={urllib.parse.quote(title)}&fields={S2_FIELDS}"
+    for attempt in range(attempts):
+        req = urllib.request.Request(url, headers={"User-Agent": "aolmo.github.io publication sync"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.load(resp)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                return {}          # no match
+            if e.code == 429 and attempt + 1 < attempts:
+                time.sleep(5 * (attempt + 1))   # rate limited: back off and retry
+                continue
+            print(f"    Semantic Scholar error {e.code}")
+            return {}
+        except (urllib.error.URLError, TimeoutError) as e:
+            print(f"    Semantic Scholar unreachable: {e}")
+            return {}
+    else:
+        return {}
+    paper = (data.get("data") or [None])[0]
+    if not paper or not titles_match(title, paper.get("title") or ""):
+        return {}
+    ids = paper.get("externalIds") or {}
     out = {}
-    m = re.search(r'<a\b[^>]*class="[^"]*gsc_(?:oci|vcd)_title_link[^"]*"[^>]*>', body)
-    if m and _attr(m.group(0), "href"):
-        out["paper_url"] = _attr(m.group(0), "href")
-    m = re.search(r'class="[^"]*gsc_(?:oci|vcd)_title_ggi[^"]*"[^>]*>.*?(<a\b[^>]*>)', body, re.S)
-    if m and _attr(m.group(1), "href"):
-        out["pdf_url"] = _attr(m.group(1), "href")
-    for field, value in re.findall(
-        r'class="gsc_(?:oci|vcd)_field"[^>]*>(.*?)</div>\s*<div\b[^>]*class="gsc_(?:oci|vcd)_value"[^>]*>(.*?)</div>',
-        body, re.S,
-    ):
-        if text(field).lower() in ("authors", "inventors"):
-            out["authors"] = text(value)
-    if not out:
-        title = re.search(r"<title>(.*?)</title>", body, re.S)
-        print(f"    debug: nothing parsed from paper page ({len(body)} bytes, "
-              f"title={text(title.group(1)) if title else None!r}, "
-              f"gsc_oci={body.count('gsc_oci')}, gsc_vcd={body.count('gsc_vcd')})")
-        for marker in ("title_link", "title_ggi", "_field"):
-            i = body.find(marker)
-            if i >= 0:
-                print(f"    debug {marker}: {body[max(0, i - 120):i + 200]!r}")
+    if ids.get("DOI"):
+        out["paper_url"] = "https://doi.org/" + ids["DOI"]
+    elif ids.get("ArXiv"):
+        out["paper_url"] = "https://arxiv.org/abs/" + ids["ArXiv"]
+    elif paper.get("url"):
+        out["paper_url"] = paper["url"]
+    pdf = (paper.get("openAccessPdf") or {}).get("url")
+    if pdf:
+        out["pdf_url"] = pdf
+    elif ids.get("ArXiv"):
+        out["pdf_url"] = "https://arxiv.org/pdf/" + ids["ArXiv"]
+    names = [a.get("name") for a in paper.get("authors") or [] if a.get("name")]
+    if names:
+        out["authors"] = ", ".join(names)
     return out
 
 
@@ -150,17 +174,14 @@ def main():
     previous = {p["scholar_url"]: p for p in (old or {}).get("publications", [])}
 
     for p in pubs:
-        time.sleep(random.uniform(3, 7))
-        try:
-            p.update(parse_detail(fetch(p["scholar_url"])))
-        except Blocked as e:
-            # Reuse what the last successful sync found for this paper.
+        time.sleep(1.5)  # stay well under Semantic Scholar's public rate limit
+        found = s2_lookup(p["title"])
+        if not found:
+            # Keep what the last successful sync found for this paper, if anything.
             prev = previous.get(p["scholar_url"], {})
-            for key in ("paper_url", "pdf_url", "authors"):
-                if key in prev:
-                    p[key] = prev[key]
-            print(f"  warning: could not read paper page ({e}); reusing previous links")
-        print(f"  {p['citations']:>5}  {p['title'][:80]}")
+            found = {k: prev[k] for k in ("paper_url", "pdf_url", "authors") if k in prev}
+        p.update(found)
+        print(f"  {p['citations']:>5}  {p['title'][:70]}  ->  {p.get('paper_url', '(Scholar page)')}")
 
     # Highest citations first; ties: newest first, then title.
     pubs.sort(key=lambda p: (-p["citations"], -(p["year"] or 0), p["title"].lower()))
