@@ -46,6 +46,17 @@
   <main>
     {{ content }}
   </main>
+  <footer>
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p class="footer-links">
+      {%- for link in site.data.links %}
+      <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
+      {%- endfor %}
+    </p>
+    {%- if site.data.scholar.updated %}
+    <p class="footer-note">Publications synced from <a href="{{ site.data.scholar.profile_url }}">Google Scholar</a> on {{ site.data.scholar.updated | date: "%B %-d, %Y" }}.</p>
+    {%- endif %}
+  </footer>
 </div>
 </body>
 </html>
