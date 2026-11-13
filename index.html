@@ -67,7 +67,6 @@ layout: default
         {%- if p.pdf_url and p.pdf_url != link %}<a href="{{ p.pdf_url }}">PDF</a>{% endif %}
         {%- if extra.preprint %}<a href="{{ extra.preprint }}">arXiv</a>{% endif %}
         {%- if extra.poster %}<a href="{{ extra.poster }}">Poster</a>{% endif %}
-        {%- if p.citations > 0 %}<a class="cites" href="{{ p.scholar_url }}">Cited by {{ p.citations }}</a>{% endif %}
       </div>
     </div>
       {%- endfor %}
