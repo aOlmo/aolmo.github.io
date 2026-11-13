@@ -1,0 +1,33 @@
+# Newest first. `venue` is optional.
+- title: "Not all Failure Modes are Created Equal: Training Deep Neural Networks for Explicable (Mis) Classification"
+  authors: Olmo, Alberto; Sengupta, Sailik; Kambhampati, Subbarao
+  venue: arXiv preprint arXiv:2006.14841
+  url: https://arxiv.org/pdf/2006.14841
+
+- title: "Imperfect imaganation: Implications of gans exacerbating biases on facial data augmentation and snapchat selfie lenses"
+  authors: Jain, Niharika; Olmo, Alberto; Sengupta, Sailik; Manikonda, Lydia; Kambhampati, Subbarao
+  venue: arXiv preprint arXiv:2001.09528
+  url: https://arxiv.org/pdf/2001.09528
+
+- title: Model-free model reconciliation
+  authors: Sreedharan, Sarath; Olmo, Alberto; Mishra, Aditya Prasad; Kambhampati, Subbarao
+  venue: arXiv preprint arXiv:1903.07198
+  url: https://arxiv.org/pdf/1903.07198.pdf
+
+- title: "Imagining an engineer: On GAN-based data augmentation perpetuating biases"
+  authors: Jain, Niharika; Manikonda, Lydia; Hernandez, Alberto Olmo; Sengupta, Sailik; Kambhampati, Subbarao
+  venue: arXiv preprint arXiv:1811.03751
+  url: https://arxiv.org/pdf/1811.03751.pdf
+
+- title: Towards understanding user preferences for explanation types in model reconciliation
+  authors: Zahedi, Zahra; Olmo, Alberto; Chakraborti, Tathagata; Sreedharan, Sarath; Kambhampati, Subbarao
+  venue: 2019 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI)
+  url: https://ieeexplore.ieee.org/abstract/document/8673097
+
+- title: Autoregressive Density Estimation in Latent Spaces
+  authors: Olmo Hernández, Alberto
+  url: https://mountainscholar.org/bitstream/handle/10976/166754/OlmoHernxE1ndez_uccs_0892N_10323.pdf?sequence=1
+
+- title: Extensió del Plugin de Sintonització de Paràmetres MPI de l'eina PTF
+  authors: Olmo Hernández, Alberto
+  url: https://ddd.uab.cat/pub/tfg/2016/tfg_39376/Extending_PTFs_MPI_Parameters_plugin_-_Alberto_Olmo.pdf

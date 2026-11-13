@@ -1,1 +1,56 @@
-<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="styles.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script><app-root></app-root>
+---
+layout: default
+---
+<h1>Hi planet!</h1>
+<p>
+  My name is Alberto Olmo, I am a third year PhD student at
+  <a href="https://www.asu.edu/">Arizona State University</a> under the supervision of prof.
+  <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a> at the
+  <a href="https://yochan-lab.github.io/home/">Planning and Artificial Intelligence lab</a>.
+  Previously, I obtained a Master of Science in Computer Science at the
+  <a href="https://www.uccs.edu/">University of Colorado at Colorado Springs</a>
+  and a Bachelor's in Computer Science at
+  <a href="https://www.uab.cat/enginyeria/">Universitat Autonoma de Barcelona</a>.
+</p>
+<p>My broad research interests lie at Explainability of Machine Learning models and Data Biases.</p>
+
+<h1>Education</h1>
+<hr>
+<ul>
+  {%- for e in site.data.education %}
+  <li>{{ e.degree }}, <span class="uni">{{ e.school }}</span>{% if e.location %}, {{ e.location }}{% endif %} &ndash; <i>{{ e.when }}</i></li>
+  {%- endfor %}
+</ul>
+
+<h1>Publications</h1>
+<hr>
+<ul class="publications">
+  {%- for p in site.data.publications %}
+  <li class="publ">
+    <a href="{{ p.url }}">{{ p.title }}</a>
+    {{ p.authors }}{% if p.venue %}. <i>{{ p.venue }}</i>{% endif %}
+  </li>
+  {%- endfor %}
+</ul>
+
+<h1>Experience</h1>
+<hr>
+<ul>
+  {%- for x in site.data.experience %}
+  <li class="entry">
+    <b>{{ x.title }}</b> {{ x.start }} ~ {{ x.end }}<br>
+    {{ x.description }}
+  </li>
+  {%- endfor %}
+</ul>
+
+<h1>Honors</h1>
+<hr>
+<ul>
+  {%- for h in site.data.honors %}
+  <li class="entry">
+    <b>{{ h.title }}</b> {{ h.start }}{% if h.end %} ~ {{ h.end }}{% endif %}<br>
+    {{ h.description }}
+  </li>
+  {%- endfor %}
+</ul>

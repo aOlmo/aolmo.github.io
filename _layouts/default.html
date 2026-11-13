@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <a href="{{ '/' | relative_url }}"><h1 class="logo"><span class="ltgt">&lt;</span>{{ site.title }} <span class="ltgt">&gt;</span></h1></a>
+    <img src="{{ '/assets/img/me.jpg' | relative_url }}" alt="Photo of {{ site.title }}" class="me">
+  </header>
+  <section>
+    {{ content }}
+  </section>
+  <footer>
+    <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+  </footer>
+</div>
+</body>
+</html>
