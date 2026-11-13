@@ -3,24 +3,18 @@
 > **This branch (`main`) is outdated and is not what the website shows.**
 > Do not make changes here.
 
-The live site at <https://aolmo.github.io> is served from the **`gh-pages`** branch.
+The live site at <https://aolmo.github.io> is the **[`gh-pages`](../../tree/gh-pages)** branch.
+It is a [Jekyll](https://jekyllrb.com/) site that GitHub Pages builds automatically on every push.
 
 | Branch | Contents |
 | --- | --- |
-| [`gh-pages`](../../tree/gh-pages) | **What is published.** Compiled output of the Angular app. |
-| [`master`](../../tree/master) | Angular source code that `gh-pages` is built from. |
+| [`gh-pages`](../../tree/gh-pages) | **The website.** Edit this branch. |
+| [`master`](../../tree/master) | Retired Angular version of the site (until Nov 2026). Do not deploy it. |
 | `main` | An early (2020) compiled build, kept only for history. |
 
 ## How to update the website
 
-`gh-pages` is generated, so edit the source on `master` and redeploy rather
-than editing the compiled files by hand:
-
-```bash
-git checkout master
-npm install
-ng serve        # preview at http://localhost:4200
-ng deploy --base-href=/   # builds and pushes the result to gh-pages
-```
-
-GitHub Pages republishes the site a minute or two after `gh-pages` changes.
+1. Switch to the `gh-pages` branch.
+2. Edit the content in `_data/` (education, experience, publications, honors, links)
+   or the bio in `index.html`. The branch's README lists which file holds what.
+3. Commit and push. The site updates a minute or two later.
