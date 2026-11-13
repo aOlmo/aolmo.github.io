@@ -13,8 +13,8 @@ GitHub Pages builds it with [Jekyll](https://jekyllrb.com/) on every push.
 | Honors | `_data/honors.yml` |
 | Sidebar links | `_data/links.yml` |
 | Bio paragraph | `index.html` |
-| Name, email, page description, Analytics ID | `_config.yml` |
-| Page frame (head, sidebar) | `_layouts/default.html` |
+| Name, role line under the name, email, page description, Analytics ID | `_config.yml` |
+| Page frame (head, header with photo and links) | `_layouts/default.html` |
 | Styles | `assets/css/site.css` |
 
 Commit and push to `gh-pages`; the site updates a minute or two later.

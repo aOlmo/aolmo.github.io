@@ -1,68 +1,82 @@
 ---
 layout: default
 ---
-<h1>Hello!</h1>
-<p>
-  My name is <b>Alberto Olmo</b>, I am a fourth year Computer Science Ph.D. candidate at
-  <a href="https://www.asu.edu/">Arizona State University</a> under the supervision of prof.
-  <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a> at the
-  <a href="https://yochan-lab.github.io/home/">Yochan lab</a>. Previously, I obtained a Master of Science
-  in Computer Science at the <a href="https://www.uccs.edu/">University of Colorado at Colorado Springs</a>
-  and a Bachelor's in Computer Science at <a href="https://www.uab.cat/enginyeria/">Universitat Autònoma de Barcelona</a>.
-</p>
-<p>My broad research interests lie in explainability of machine learning models and data biases.</p>
-
-<h1>Education</h1>
-<hr>
-<div class="schools">
-  {%- for s in site.data.education %}
-  <div class="school">
-    <img src="{{ s.logo }}" alt="{{ s.school }} logo" class="{{ s.logo_class }}" width="360">
-    <div>
-      <b><i>{{ s.school }}</i></b><br>
-      {{ s.degree }}<br>
-      <span class="badge badge-light">{{ s.years }}</span>
-    </div>
+<section>
+  <h2>About</h2>
+  <div>
+    <p>
+      My name is <strong>Alberto Olmo</strong>, I am a fourth year Computer Science Ph.D. candidate at
+      <a href="https://www.asu.edu/">Arizona State University</a> under the supervision of prof.
+      <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a> at the
+      <a href="https://yochan-lab.github.io/home/">Yochan lab</a>. Previously, I obtained a Master of Science
+      in Computer Science at the <a href="https://www.uccs.edu/">University of Colorado at Colorado Springs</a>
+      and a Bachelor's in Computer Science at <a href="https://www.uab.cat/enginyeria/">Universitat Autònoma de Barcelona</a>.
+    </p>
+    <p>My broad research interests lie in explainability of machine learning models and data biases.</p>
   </div>
-  {%- endfor %}
-</div>
+</section>
 
-<h1>Experience</h1>
-<hr>
-<ul class="entries">
-  {%- for x in site.data.experience %}
-  <li>
-    <b>{{ x.title }}</b> <span class="badge badge-light dates">{{ x.start }} - {{ x.end }}</span>
-    <div>{{ x.description }}</div>
-  </li>
-  {%- endfor %}
-</ul>
+<section>
+  <h2>Experience</h2>
+  <div>
+    {%- for x in site.data.experience %}
+    {%- assign parts = x.title | split: " @ " %}
+    <div class="item">
+      <div class="item-head"><span class="item-title">{{ parts[0] }}</span><span class="date">{{ x.start }} – {{ x.end }}</span></div>
+      <div class="org">{{ parts[1] }}</div>
+      <div class="desc">{{ x.description }}</div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
 
-<h1>Publications</h1>
-<hr>
-<ul class="publications">
-  {%- for p in site.data.publications %}
-  <li>
-    {% include icons/file-alt.svg %}
-    <a href="{{ p.paper }}">{{ p.title }}</a><br>
-    {%- assign names = p.authors | split: ", " %}
-    {% for n in names %}{% if n contains "Alberto Olmo" %}<b>{{ n }}</b>{% else %}{{ n }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
-    {%- if p.venues %}<br>{% for v in p.venues %}<span class="badge badge-light">{{ v }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}
-    {%- if p.paper %} · <a href="{{ p.paper }}" class="badge badge-info">Paper</a>{% endif %}
-    {%- if p.preprint %} · <a href="{{ p.preprint }}" class="badge badge-secondary">arXiv</a>{% endif %}
-    {%- if p.poster %} · <a href="{{ p.poster }}" class="badge badge-primary">Poster</a>{% endif %}
-  </li>
-  {%- endfor %}
-</ul>
+<section>
+  <h2>Publications</h2>
+  <div>
+    {%- for p in site.data.publications %}
+    <div class="item">
+      <a class="pub-title" href="{{ p.paper }}">{{ p.title }}</a>
+      <div class="authors">
+        {%- assign names = p.authors | split: ", " -%}
+        {%- for n in names -%}{%- if n contains "Alberto Olmo" -%}<strong class="me-author">{{ n }}</strong>{%- else -%}{{ n }}{%- endif -%}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
+      </div>
+      <div class="meta">
+        {%- if p.venues %}<span class="venue">{{ p.venues | join: " · " }}</span>{% endif %}
+        <a href="{{ p.paper }}">Paper</a>
+        {%- if p.preprint %}<a href="{{ p.preprint }}">arXiv</a>{% endif %}
+        {%- if p.poster %}<a href="{{ p.poster }}">Poster</a>{% endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
 
-<h1>Honors</h1>
-<hr>
-<ul class="entries">
-  {%- for h in site.data.honors %}
-  <li>
-    <b>{% if h.url %}<a href="{{ h.url }}">{{ h.title }}</a>{% else %}{{ h.title }}{% endif %}</b>
-    <span class="badge badge-light dates">{{ h.start }}{% if h.end %} - {{ h.end }}{% endif %}</span>
-    <div>{{ h.description }}</div>
-  </li>
-  {%- endfor %}
-</ul>
+<section>
+  <h2>Education</h2>
+  <div>
+    {%- for s in site.data.education %}
+    <div class="item edu">
+      <img src="{{ s.logo }}" alt="{{ s.school }} logo" width="44" height="44">
+      <div class="grow">
+        <div class="item-head"><span class="item-title">{{ s.school }}</span><span class="date">{{ s.years | replace: " - ", " – " }}</span></div>
+        <div class="org">{{ s.degree }}</div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Honors</h2>
+  <div>
+    {%- for h in site.data.honors %}
+    <div class="item">
+      <div class="item-head">
+        <span class="item-title">{% if h.url %}<a href="{{ h.url }}">{{ h.title }}</a>{% else %}{{ h.title }}{% endif %}</span>
+        <span class="date">{{ h.start }}{% if h.end %} – {{ h.end }}{% endif %}</span>
+      </div>
+      <div class="desc">{{ h.description }}</div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

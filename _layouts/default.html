@@ -7,6 +7,7 @@
   <meta name="description" content="{{ site.description | strip }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="/favicon.ico">
+  <meta name="color-scheme" content="light dark">
 
   <meta property="og:type" content="profile">
   <meta property="og:title" content="{{ site.title }}">
@@ -15,7 +16,6 @@
   <meta property="og:image" content="{{ '/assets/imgs/me.jpg' | absolute_url }}">
   <meta name="twitter:card" content="summary">
 
-  <link rel="preload" href="/assets/fonts/computer-modern.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
 
   {%- if site.google_analytics and jekyll.environment == "production" %}
@@ -29,24 +29,23 @@
   {%- endif %}
 </head>
 <body>
-<div class="container">
-  <div class="row">
-    <aside class="col-sidebar">
-      <a href="/" class="logo"><span class="ltgt">[ </span>{{ site.title }} <span class="ltgt">]</span></a>
-      <img src="/assets/imgs/me.jpg" alt="Photo of {{ site.title }}" class="me" width="1080" height="1350">
-
-      <div class="card">
-        <h2 class="card-title">Links</h2>
-        <p>{{ site.email }}</p>
+<div class="wrap">
+  <header>
+    <a href="/"><img src="/assets/imgs/me.jpg" alt="Photo of {{ site.title }}" width="112" height="112"></a>
+    <div>
+      <h1><a href="/">{{ site.title }}</a></h1>
+      <p class="role">{{ site.role }}</p>
+      <nav class="links" aria-label="Links">
+        <a href="mailto:{{ site.email }}">{% include icons/envelope.svg %} Email</a>
         {%- for link in site.data.links %}
-        <a href="{{ link.url }}">{% include icons/{{ link.icon }}.svg %} {{ link.label }}</a><br>
+        <a href="{{ link.url }}">{% include icons/{{ link.icon }}.svg %} {{ link.label }}</a>
         {%- endfor %}
-      </div>
-    </aside>
-    <main class="col-main">
-      {{ content }}
-    </main>
-  </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+  </main>
 </div>
 </body>
 </html>
