@@ -116,8 +116,6 @@ section p:last-child { margin-bottom: 0; }
 .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 4px; font-size: 14px; }
 .venue { color: var(--muted); font-style: italic; }
 
-.cites { color: var(--muted); }
-
 /* ---- Footer ---- */
 
 footer {
