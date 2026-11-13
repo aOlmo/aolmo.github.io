@@ -1,2 +1,3 @@
-ng serve
-ng deploy --base-href=aolmo.github.io --message=""
+# RETIRED: do not deploy from this branch. Edit the gh-pages branch instead (see README.md).
+# ng serve
+# ng deploy --base-href=aolmo.github.io --message=""

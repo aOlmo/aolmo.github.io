@@ -1,3 +1,13 @@
+# aolmo.github.io (retired Angular source)
+
+> **This branch is retired. Do not run `ng deploy` from it.**
+> The website is now a Jekyll site that lives on the
+> [`gh-pages`](../../tree/gh-pages) branch, which GitHub Pages builds automatically.
+> Running `ng deploy` here would overwrite the live site with this old version.
+> Edit the `gh-pages` branch instead.
+
+---
+
 # HelloWorld
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
