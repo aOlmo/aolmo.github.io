@@ -17,6 +17,21 @@ layout: default
 </section>
 
 <section>
+  <h2>Education</h2>
+  <div>
+    {%- for s in site.data.education %}
+    <div class="item edu">
+      <img src="{{ s.logo }}" alt="{{ s.school }} logo" width="44" height="44">
+      <div class="grow">
+        <div class="item-head"><span class="item-title">{{ s.school }}</span><span class="date">{{ s.years | replace: " - ", " – " }}</span></div>
+        <div class="org">{{ s.degree }}</div>
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section>
   <h2>Experience</h2>
   <div>
     {%- for x in site.data.experience %}
@@ -33,13 +48,34 @@ layout: default
 <section>
   <h2>Publications</h2>
   <div>
-    {%- for p in site.data.publications %}
+    {%- if site.data.scholar.publications and site.data.scholar.publications.size > 0 %}
+      {%- comment %} Synced from Google Scholar by the scholar-sync workflow (main branch), sorted by citations. {% endcomment %}
+      {%- for p in site.data.scholar.publications %}
+        {%- assign key = p.title | downcase | strip %}
+        {%- assign extra = nil %}
+        {%- for e in site.data.publication_extras %}
+          {%- assign ekey = e.match | downcase | strip %}
+          {%- if key contains ekey %}{% assign extra = e %}{% endif %}
+        {%- endfor %}
+        {%- assign link = p.paper_url | default: p.pdf_url | default: p.scholar_url %}
+    <div class="item">
+      <a class="pub-title" href="{{ link }}">{{ p.title }}</a>
+      <div class="authors">{% include authors.html authors=p.authors %}</div>
+      <div class="meta">
+        {%- if p.venue and p.venue != "" %}<span class="venue">{{ p.venue }}{% if p.year %}, {{ p.year }}{% endif %}</span>{% elsif p.year %}<span class="venue">{{ p.year }}</span>{% endif %}
+        <a href="{{ link }}">Paper</a>
+        {%- if p.pdf_url and p.pdf_url != link %}<a href="{{ p.pdf_url }}">PDF</a>{% endif %}
+        {%- if extra.preprint %}<a href="{{ extra.preprint }}">arXiv</a>{% endif %}
+        {%- if extra.poster %}<a href="{{ extra.poster }}">Poster</a>{% endif %}
+        {%- if p.citations > 0 %}<a class="cites" href="{{ p.scholar_url }}">Cited by {{ p.citations }}</a>{% endif %}
+      </div>
+    </div>
+      {%- endfor %}
+    {%- else %}
+      {%- for p in site.data.publications %}
     <div class="item">
       <a class="pub-title" href="{{ p.paper }}">{{ p.title }}</a>
-      <div class="authors">
-        {%- assign names = p.authors | split: ", " -%}
-        {%- for n in names -%}{%- if n contains "Alberto Olmo" -%}<strong class="me-author">{{ n }}</strong>{%- else -%}{{ n }}{%- endif -%}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
-      </div>
+      <div class="authors">{% include authors.html authors=p.authors %}</div>
       <div class="meta">
         {%- if p.venues %}<span class="venue">{{ p.venues | join: " · " }}</span>{% endif %}
         <a href="{{ p.paper }}">Paper</a>
@@ -47,22 +83,8 @@ layout: default
         {%- if p.poster %}<a href="{{ p.poster }}">Poster</a>{% endif %}
       </div>
     </div>
-    {%- endfor %}
-  </div>
-</section>
-
-<section>
-  <h2>Education</h2>
-  <div>
-    {%- for s in site.data.education %}
-    <div class="item edu">
-      <img src="{{ s.logo }}" alt="{{ s.school }} logo" width="44" height="44">
-      <div class="grow">
-        <div class="item-head"><span class="item-title">{{ s.school }}</span><span class="date">{{ s.years | replace: " - ", " – " }}</span></div>
-        <div class="org">{{ s.degree }}</div>
-      </div>
-    </div>
-    {%- endfor %}
+      {%- endfor %}
+    {%- endif %}
   </div>
 </section>
 

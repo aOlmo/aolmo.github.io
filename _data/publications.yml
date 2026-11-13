@@ -1,3 +1,4 @@
+# Fallback list, shown only until the Google Scholar sync has produced _data/scholar.yml.
 # Newest first. Authors are comma-separated; "Alberto Olmo" is shown in bold.
 # Optional fields: venues, paper, preprint, poster.
 - title: Implications of GANs Exacerbating Biases on Facial Data Augmentation and Snapchat Face Lenses
