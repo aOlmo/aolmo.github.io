@@ -11,7 +11,8 @@
       "citations": 663,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:zYLM7Y9cAGgC",
       "paper_url": "https://doi.org/10.52202/075280-1693",
-      "pdf_url": "https://arxiv.org/pdf/2206.10498"
+      "pdf_url": "https://arxiv.org/pdf/2206.10498",
+      "abstract": "Generating plans of action, and reasoning about change have long been considered a core competence of intelligent agents. It is thus no surprise that evaluating the planning and reasoning capabilities of large language models (LLMs) has become a hot topic of research. Most claims about LLM planning capabilities are however based on common sense tasks-where it becomes hard to tell whether LLMs are planning or merely retrieving from their vast world knowledge. There is a strong need for systematic and extensible planning benchmarks with sufficient diversity to evaluate whether LLMs have innate planning capabilities. Motivated by this, we propose PlanBench, an extensible benchmark suite based on the kinds of domains used in the automated planning community, especially in the International Planning Competition, to test the capabilities of LLMs in planning or reasoning about actions and change. PlanBench provides sufficient diversity in both the task domains and the specific planning capabilities. Our studies also show that on many critical capabilities-including plan generation-LLM performance falls quite short, even with the SOTA models. PlanBench can thus function as a useful marker of progress of LLMs in planning and reasoning."
     },
     {
       "title": "Large language models still can't plan (a benchmark for LLMs on planning and reasoning about change)",
@@ -29,7 +30,8 @@
       "citations": 149,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:W7OEmFMy1HYC",
       "paper_url": "https://doi.org/10.48550/arXiv.2302.06706",
-      "pdf_url": "http://arxiv.org/pdf/2302.06706"
+      "pdf_url": "http://arxiv.org/pdf/2302.06706",
+      "abstract": "Intrigued by the claims of emergent reasoning capabilities in LLMs trained on general web corpora, in this paper, we set out to investigate their planning capabilities. We aim to evaluate (1) how good LLMs are by themselves in generating and validating simple plans in commonsense planning tasks (of the type that humans are generally quite good at) and (2) how good LLMs are in being a source of heuristic guidance for other agents--either AI planners or human planners--in their planning tasks. To investigate these questions in a systematic rather than anecdotal manner, we start by developing a benchmark suite based on the kinds of domains employed in the International Planning Competition. On this benchmark, we evaluate LLMs in three modes: autonomous, heuristic and human-in-the-loop. Our results show that LLM's ability to autonomously generate executable plans is quite meager, averaging only about 3% success rate. The heuristic and human-in-the-loop modes show slightly more promise. In addition to these results, we also make our benchmark and evaluation tools available to support investigations by research community."
     },
     {
       "title": "Imperfect ImaGANation: Implications of GANs exacerbating biases on facial data augmentation and snapchat face lenses",
@@ -49,7 +51,8 @@
       "citations": 84,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:qjMakFHDy7sC",
       "paper_url": "https://doi.org/10.48550/arXiv.2106.07131",
-      "pdf_url": "https://arxiv.org/pdf/2106.07131"
+      "pdf_url": "https://arxiv.org/pdf/2106.07131",
+      "abstract": "Operations in many essential industries including finance and banking are often characterized by the need to perform repetitive sequential tasks. Despite their criticality to the business, workflows are rarely fully automated or even formally specified, though there may exist a number of natural language documents describing these procedures for the employees of the company. Plan extraction methods provide us with the possibility of extracting structure plans from such natural language descriptions of the plans/workflows, which could then be leveraged by an automated system. In this paper, we investigate the utility of generalized language models in performing such extractions directly from such texts. Such models have already been shown to be quite effective in multiple translation tasks, and our initial results seem to point to their effectiveness also in the context of plan extractions. Particularly, we show that GPT-3 is able to generate plan extraction results that are comparable to many of the current state of the art plan extraction methods."
     },
     {
       "title": "Model-free model reconciliation",
@@ -68,7 +71,8 @@
       "year": 2019,
       "citations": 32,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:IjCSPb-OGe4C",
-      "paper_url": "https://doi.org/10.1109/HRI.2019.8673097"
+      "paper_url": "https://doi.org/10.1109/HRI.2019.8673097",
+      "abstract": "Recent work has formalized the explanation process in the context of automated planning as one of model reconciliation - i.e. a process by which the planning agent can bring the explainee's (possibly faulty) model of a planning problem closer to its understanding of the ground truth until both agree that its plan is the best possible. The content of explanations can thus range from misunderstandings about the agent's beliefs (state), desires (goals) and capabilities (action model). Though existing literature has considered different kinds of these model differences to be equivalent, literature on the explanations in social sciences has suggested that explanations with similar logical properties may often be perceived differently by humans. In this brief report, we explore to what extent humans attribute importance to different kinds of model differences that have been traditionally considered equivalent in the model reconciliation setting. Our results suggest that people prefer the explanations which are related to the effects of actions."
     },
     {
       "title": "Physics-driven convolutional autoencoder approach for CFD data compressions",
@@ -78,7 +82,8 @@
       "citations": 11,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:Y0pCki6q_DkC",
       "paper_url": "https://arxiv.org/abs/2210.09262",
-      "pdf_url": "https://arxiv.org/pdf/2210.09262"
+      "pdf_url": "https://arxiv.org/pdf/2210.09262",
+      "abstract": "With the growing size and complexity of turbulent flow models, data compression approaches are of the utmost importance to analyze, visualize, or restart the simulations. Recently, in-situ autoencoder-based compression approaches have been proposed and shown to be effective at producing reduced representations of turbulent flow data. However, these approaches focus solely on training the model using point-wise sample reconstruction losses that do not take advantage of the physical properties of turbulent flows. In this paper, we show that training autoencoders with additional physics-informed regularizations, e.g., enforcing incompressibility and preserving enstrophy, improves the compression model in three ways: (i) the compressed data better conform to known physics for homogeneous isotropic turbulence without negatively impacting point-wise reconstruction quality, (ii) inspection of the gradients of the trained model uncovers changes to the learned compression mapping that can facilitate the use of explainability techniques, and (iii) as a performance byproduct, training losses are shown to converge up to 12x faster than the baseline model."
     },
     {
       "title": "Not all failure modes are created equal: Training deep neural networks for explicable (mis) classification",
@@ -88,7 +93,8 @@
       "citations": 9,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:UeHWp8X0CEIC",
       "paper_url": "https://doi.org/10.48550/arXiv.2006.14841",
-      "pdf_url": "https://arxiv.org/pdf/2006.14841"
+      "pdf_url": "https://arxiv.org/pdf/2006.14841",
+      "abstract": "Deep Neural Networks are often brittle on image classification tasks and known to misclassify inputs. While these misclassifications may be inevitable, all failure modes cannot be considered equal. Certain misclassifications (eg. classifying the image of a dog to an airplane) can create surprise and result in the loss of human trust in the system. Even worse, certain errors (eg. a person misclassified as a primate) can have societal impacts. Thus, in this work, we aim to reduce inexplicable errors. To address this challenge, we first discuss how to obtain the class-level semantics that captures the human's expectation ($M^h$) regarding which classes are semantically close vs. ones that are far away. We show that for data-sets like CIFAR-10 and CIFAR-100, class-level semantics can be obtained by leveraging human subject studies (significantly inexpensive compared to existing works) and, whenever possible, by utilizing publicly available human-curated knowledge. Second, we propose the use of Weighted Loss Functions to penalize misclassifications by the weight of their inexplicability. Finally, we show that training (or even fine-tuning) existing classifiers with the two proposed methods lead to Deep Neural Networks that have (1) comparable top-1 accuracy, an important metric in operational contexts, (2) more explicable failure modes and (3) require significantly less cost in teams of additional human labels compared to existing work."
     },
     {
       "title": "Analyzing Failure Modes of Inscrutable Machine Learning Models",
