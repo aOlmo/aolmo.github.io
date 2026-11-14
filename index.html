@@ -57,7 +57,7 @@ layout: default
           {%- assign ekey = e.match | downcase | strip %}
           {%- if key contains ekey %}{% assign extra = e %}{% endif %}
         {%- endfor %}
-        {%- assign link = p.paper_url | default: p.pdf_url | default: p.scholar_url %}
+        {%- assign link = extra.paper | default: p.paper_url | default: p.pdf_url | default: p.scholar_url %}
     <div class="item">
       <a class="pub-title" href="{{ link }}">{{ p.title }}</a>
       <div class="authors">{% include authors.html authors=p.authors %}</div>
