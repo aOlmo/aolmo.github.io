@@ -14,7 +14,7 @@ GitHub Pages builds it with [Jekyll](https://jekyllrb.com/) on every push.
 | Honors | `_data/honors.yml` |
 | Sidebar links | `_data/links.yml` |
 | Bio paragraph | `index.html` |
-| Name, role line under the name, email, page description, Analytics ID | `_config.yml` |
+| Name, role line under the name, email, page description, Analytics ID, search-engine profile info (`person:`) | `_config.yml` |
 | Page frame (head, header with photo and links) | `_layouts/default.html` |
 | Styles | `assets/css/site.css` |
 
@@ -32,6 +32,15 @@ the site shows the hand-written list in `_data/publications.yml`.
 
 Don't edit `_data/scholar.json` by hand; the next sync overwrites it. To add a
 poster or arXiv link to a paper, add an entry to `_data/publication_extras.yml`.
+
+## Search engines
+
+- `/sitemap.xml` and `/robots.txt` are generated automatically (jekyll-sitemap).
+- The home page includes schema.org structured data (`_includes/structured-data.html`):
+  you as a `Person` (with your profiles from `_data/links.yml` marked `profile: true`
+  as `sameAs`), and each publication as a `ScholarlyArticle`. Check it with
+  <https://search.google.com/test/rich-results> or <https://validator.schema.org>.
+- Profile links carry `rel="me"`.
 
 ## Previewing locally (optional)
 
