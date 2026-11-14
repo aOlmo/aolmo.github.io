@@ -5,7 +5,7 @@ description: >-
 url: https://aolmo.github.io
 baseurl: ""
 email: aolmoher@asu.edu
-role: Ph.D. candidate in Computer Science · Arizona State University
+role: Computer Science Ph.D. | A.I. Researcher
 google_analytics: G-PLK10WWTXE
 
 # Used for search engines' structured data (JSON-LD, see _includes/structured-data.html).
@@ -13,7 +13,7 @@ person:
   alternate_names: [Alberto Olmo Hernández, Alberto Olmo Hernandez]
   # An author name containing any of these is you (bold on the page, linked in structured data).
   author_matches: [Olmo, AO Hernandez]
-  job_title: Ph.D. candidate in Computer Science
+  job_title: A.I. Researcher
   affiliation: Arizona State University
   affiliation_url: https://www.asu.edu/
   knows_about:
