@@ -48,7 +48,8 @@ header img {
   width: 112px;
   height: 112px;
   flex: none;
-  border-radius: 50%;
+  /* Rounded square, same proportions as the 44px logos (10px corners). */
+  border-radius: 25px;
   object-fit: cover;
   object-position: 50% 20%;
 }
