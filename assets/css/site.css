@@ -129,6 +129,39 @@ section p:last-child { margin-bottom: 0; }
   object-fit: contain;
 }
 
+/* Publications: small number on top, a faint rule hanging beneath it (timeline);
+   both turn the accent colour on hover. */
+.pubs { counter-reset: pub; }
+.pubs > .item { position: relative; padding: 2px 0 2px 38px; margin-bottom: 22px; }
+.pubs > .item:last-child { margin-bottom: 0; }
+.pubs > .item::before {
+  counter-increment: pub;
+  content: counter(pub, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 22px;
+  text-align: center;
+  color: var(--muted);
+  opacity: 0.65;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.15s, opacity 0.15s;
+}
+.pubs > .item::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 26px;
+  bottom: 2px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line);
+  transition: background-color 0.15s;
+}
+.pubs > .item:hover::before { color: var(--accent); opacity: 1; }
+.pubs > .item:hover::after { background: var(--accent); }
+
 .pub-title { font-weight: 600; color: var(--text); }
 .pub-title:hover { color: var(--accent); }
 .authors { color: var(--muted); font-size: 15px; }

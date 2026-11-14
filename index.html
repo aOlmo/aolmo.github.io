@@ -57,7 +57,7 @@ layout: default
 
 <section>
   <h2>Publications</h2>
-  <div>
+  <div class="pubs">
     {%- if site.data.scholar.publications and site.data.scholar.publications.size > 0 %}
       {%- comment %} Synced from Google Scholar by the scholar-sync workflow (main branch), sorted by citations. {% endcomment %}
       {%- for p in site.data.scholar.publications %}
