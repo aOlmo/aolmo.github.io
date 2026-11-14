@@ -1,7 +1,15 @@
+# `description` is optional and may contain HTML links.
 - school: Arizona State University
   degree: C.S. Ph.D.
-  years: 2018 - 2023
+  years: 2018 - 2022
   logo: /assets/imgs/asu-logo.png
+  description: >-
+    Research on when and why large deep learning models fail. Highlights:
+    <a href="https://doi.org/10.52202/075280-1693">PlanBench</a>, an extensible benchmark
+    showing that large language models still struggle to plan and to reason about change,
+    and <a href="https://doi.org/10.1016/j.artint.2021.103652">Imperfect ImaGANation</a>,
+    which showed that GAN-based data augmentation can amplify the biases already present
+    in facial data, an effect also visible in Snapchat face lenses.
 
 - school: UC Colorado Springs
   degree: C.S. Master's
