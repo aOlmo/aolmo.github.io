@@ -132,7 +132,7 @@ section p:last-child { margin-bottom: 0; }
 /* Publications: small number in a narrow gutter, with a faint rule between the
    number and the paper; both turn the accent colour on hover. */
 .pubs { counter-reset: pub; }
-.pubs > .item { position: relative; padding: 2px 0 2px 44px; margin-bottom: 22px; }
+.pubs > .item { position: relative; padding: 2px 0 2px 40px; margin-bottom: 22px; }
 .pubs > .item:last-child { margin-bottom: 0; }
 .pubs > .item::before {
   counter-increment: pub;
@@ -151,7 +151,7 @@ section p:last-child { margin-bottom: 0; }
 .pubs > .item::after {
   content: "";
   position: absolute;
-  left: 32px;
+  left: 28px;
   top: 4px;
   bottom: 4px;
   width: 2px;
