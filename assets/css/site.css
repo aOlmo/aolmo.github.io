@@ -161,6 +161,9 @@ section p:last-child { margin-bottom: 0; }
 }
 .pubs > .item:hover::before { color: var(--accent); opacity: 1; }
 .pubs > .item:hover::after { background: var(--accent); }
+/* On wide screens, pull the list into the column gap so the numbers sit closer
+   to the "Publications" label (the label column only stacks on small screens). */
+@media (min-width: 641px) { .pubs { margin-left: -36px; } }
 
 .pub-title { font-weight: 600; color: var(--text); }
 .pub-title:hover { color: var(--accent); }
