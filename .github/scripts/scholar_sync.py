@@ -6,7 +6,7 @@ Usage: scholar_sync.py OUTPUT_JSON
 Reads the profile given by the SCHOLAR_USER environment variable, sorted by
 citations (one request to Google Scholar per run, to avoid being blocked),
 looks up each paper on the Semantic Scholar API for a link to the paper (DOI,
-arXiv or open-access PDF) and its full author list, and writes OUTPUT_JSON
+arXiv or open-access PDF), its full author list and its abstract, and writes OUTPUT_JSON
 (read by Jekyll as site.data.scholar).
 
 The output file is only rewritten when the publication list actually changed.
@@ -88,7 +88,7 @@ def parse_profile(body):
 
 
 S2_MATCH = "https://api.semanticscholar.org/graph/v1/paper/search/match"
-S2_FIELDS = "title,url,externalIds,openAccessPdf,authors"
+S2_FIELDS = "title,url,externalIds,openAccessPdf,authors,abstract"
 
 
 def normalize(title):
@@ -141,6 +141,8 @@ def s2_lookup(title, attempts=4):
     names = [a.get("name") for a in paper.get("authors") or [] if a.get("name")]
     if names:
         out["authors"] = ", ".join(names)
+    if paper.get("abstract"):
+        out["abstract"] = " ".join(paper["abstract"].split())
     return out
 
 
@@ -190,7 +192,7 @@ def main():
         if not found:
             # Keep what the last successful sync found for this paper, if anything.
             prev = previous.get(p["scholar_url"], {})
-            found = {k: prev[k] for k in ("paper_url", "pdf_url", "authors") if k in prev}
+            found = {k: prev[k] for k in ("paper_url", "pdf_url", "authors", "abstract") if k in prev}
         p.update(found)
         print(f"  {p['citations']:>5}  {p['title'][:70]}  ->  {p.get('paper_url', '(Scholar page)')}")
 
