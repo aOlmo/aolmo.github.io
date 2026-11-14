@@ -39,7 +39,7 @@ layout: default
     {%- assign parts = x.title | split: " @ " %}
     <div class="item with-logo">
       {%- if x.logo %}
-      <img class="logo{% if x.logo_dark %} logo-dark{% endif %}" src="{{ x.logo }}" alt="{{ parts[1] }} logo" width="44" height="44">
+      <img class="logo{% if x.logo_full %} logo-full{% endif %}" src="{{ x.logo }}" alt="{{ parts[1] }} logo" width="44" height="44">
       {%- else %}
       <span class="logo logo-tile" aria-hidden="true">{{ x.initials }}</span>
       {%- endif %}

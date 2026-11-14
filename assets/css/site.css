@@ -109,7 +109,7 @@ section p:last-child { margin-bottom: 0; }
   border-radius: 10px;
 }
 .with-logo img.logo { padding: 4px; background: var(--logo-bg); object-fit: contain; }
-.with-logo img.logo-dark { padding: 0; background: #000; }
+.with-logo img.logo-full { padding: 0; background: none; box-shadow: 0 0 0 1px var(--line); }
 .logo-tile {
   display: flex;
   align-items: center;
