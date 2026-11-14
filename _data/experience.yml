@@ -50,7 +50,7 @@
   start: Jan 2018
   end: Jun 2018
   description: >-
-    Worked under the supervision of Prof. Eduardo Cesar Galobardes.
+    Worked under the supervision of Prof. <a href="https://webs.uab.cat/hpca4se/es/personal/eduardo-cesar-2/">Eduardo Cesar Galobardes</a>.
     Prepared the first stable release (v1.0) of
     <a href="https://github.com/HPCA4SE-UAB/MATE">MATE</a>, a tool that monitors, analyzes and tunes
     parallel MPI applications while they run: built its configure and Makefile toolchain with dependency
