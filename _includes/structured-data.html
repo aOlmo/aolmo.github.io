@@ -1,0 +1,111 @@
+{%- comment -%}
+  Structured data (JSON-LD, schema.org) for search engines, home page only.
+  Describes the person, the profile page and each publication. Values come
+  from _config.yml (`person:`), _data/links.yml (`profile: true`),
+  _data/education.yml and _data/scholar.json (or the fallback publications.yml).
+{%- endcomment -%}
+{%- if page.url == "/" -%}
+{%- assign home = "/" | absolute_url -%}
+{%- assign person_id = home | append: "#person" -%}
+{%- if site.data.scholar.publications and site.data.scholar.publications.size > 0 -%}
+  {%- assign pubs = site.data.scholar.publications -%}
+  {%- assign synced = true -%}
+{%- else -%}
+  {%- assign pubs = site.data.publications -%}
+  {%- assign synced = false -%}
+{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": {{ home | append: "#profilepage" | jsonify }},
+      "url": {{ home | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | strip | jsonify }},
+      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+      "mainEntity": { "@id": {{ person_id | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "alternateName": {{ site.person.alternate_names | jsonify }},
+      "url": {{ home | jsonify }},
+      "image": {{ "/assets/imgs/me.jpg" | absolute_url | jsonify }},
+      "email": {{ "mailto:" | append: site.email | jsonify }},
+      "jobTitle": {{ site.person.job_title | jsonify }},
+      "description": {{ site.description | strip | jsonify }},
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": {{ site.person.affiliation | jsonify }},
+        "url": {{ site.person.affiliation_url | jsonify }}
+      },
+      "alumniOf": [
+        {%- assign first = true -%}
+        {%- for s in site.data.education -%}
+          {%- unless s.school == site.person.affiliation -%}
+            {%- unless first %},{% endunless %}
+        { "@type": "CollegeOrUniversity", "name": {{ s.school | jsonify }} }
+            {%- assign first = false -%}
+          {%- endunless -%}
+        {%- endfor %}
+      ],
+      "knowsAbout": {{ site.person.knows_about | jsonify }},
+      "sameAs": [
+        {%- assign first = true -%}
+        {%- for link in site.data.links -%}
+          {%- if link.profile -%}
+            {%- unless first %},{% endunless %}
+        {{ link.url | jsonify }}
+            {%- assign first = false -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- if site.data.scholar.profile_url -%}
+          {%- unless first %},{% endunless %}
+        {{ site.data.scholar.profile_url | jsonify }}
+        {%- endif %}
+      ]
+    }
+    {%- for p in pubs -%}
+      {%- if synced -%}
+        {%- assign key = p.title | downcase | strip -%}
+        {%- assign extra = nil -%}
+        {%- for e in site.data.publication_extras -%}
+          {%- assign ekey = e.match | downcase | strip -%}
+          {%- if key contains ekey %}{% assign extra = e %}{% endif -%}
+        {%- endfor -%}
+        {%- assign link = extra.paper | default: p.paper_url | default: p.pdf_url | default: p.scholar_url -%}
+        {%- assign year = p.year -%}
+      {%- else -%}
+        {%- assign link = p.paper -%}
+        {%- assign year = nil -%}
+      {%- endif -%}
+      {%- assign names = p.authors | split: ", " %},
+    {
+      "@type": "ScholarlyArticle",
+      "headline": {{ p.title | truncate: 110 | jsonify }},
+      "name": {{ p.title | jsonify }},
+      "url": {{ link | jsonify }}
+      {%- if year %},
+      "datePublished": {{ year | append: "" | jsonify }}
+      {%- endif %},
+      "author": [
+        {%- for n in names -%}
+          {%- assign is_me = false -%}
+          {%- for m in site.person.author_matches -%}{%- if n contains m %}{% assign is_me = true %}{% endif -%}{%- endfor -%}
+          {%- if is_me %}
+        { "@id": {{ person_id | jsonify }} }
+          {%- else %}
+        { "@type": "Person", "name": {{ n | jsonify }} }
+          {%- endif -%}
+          {%- unless forloop.last %},{% endunless -%}
+        {%- endfor %}
+      ]
+    }
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif -%}

@@ -1,3 +1,8 @@
-{%- comment %} Comma-separated author list; any name containing "Olmo" is shown in bold. {% endcomment -%}
+{%- comment %} Comma-separated author list; names matching site.person.author_matches are shown in bold. {% endcomment -%}
 {%- assign names = include.authors | split: ", " -%}
-{%- for n in names -%}{%- if n contains "Olmo" -%}<strong class="me-author">{{ n }}</strong>{%- else -%}{{ n }}{%- endif -%}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}
+{%- for n in names -%}
+  {%- assign is_me = false -%}
+  {%- for m in site.person.author_matches -%}{%- if n contains m %}{% assign is_me = true %}{% endif -%}{%- endfor -%}
+  {%- if is_me -%}<strong class="me-author">{{ n }}</strong>{%- else -%}{{ n }}{%- endif -%}
+  {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

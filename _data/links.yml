@@ -1,13 +1,18 @@
-# Sidebar "Links" card. `icon` is a file in _includes/icons/ (without .svg).
+# Links under the name and in the footer. `icon` is a file in _includes/icons/ (without .svg).
+# `profile: true` marks your own accounts: they get rel="me" and are listed to
+# search engines as your profiles (structured data `sameAs`).
 - label: Google Scholar
   url: https://scholar.google.com/citations?user=qIYCV4sAAAAJ&hl=en
   icon: graduation-cap
+  profile: true
 - label: LinkedIn
   url: https://www.linkedin.com/in/alberto-olmo/
   icon: linkedin
+  profile: true
 - label: GitHub
   url: https://github.com/aOlmo
   icon: github
+  profile: true
 - label: Yochan Lab
   url: https://yochan-lab.github.io/home/
   icon: flask
