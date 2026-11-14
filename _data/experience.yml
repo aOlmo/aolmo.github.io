@@ -13,8 +13,14 @@
   start: Aug 2018
   end: Dec 2022
   description: >-
-    I am a Research Assistant at the <a href="https://yochan-lab.github.io/home/">Planning and Artificial Intelligence lab</a>
-    under the supervision of professor <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a> at Arizona State University.
+    Researched when and why large deep learning models fail at the
+    <a href="https://yochan-lab.github.io/home/">Planning and Artificial Intelligence (Yochan) lab</a>,
+    under the supervision of Prof. <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a>.
+    Highlights: <a href="https://doi.org/10.52202/075280-1693">PlanBench</a>, an extensible benchmark
+    showing that large language models still struggle to plan and to reason about change, and
+    <a href="https://doi.org/10.1016/j.artint.2021.103652">Imperfect ImaGANation</a>, which showed that
+    GAN-based data augmentation can amplify the biases already present in facial data, an effect also
+    visible in Snapchat face lenses.
 
 - title: Graduate Research Assistant @ UAB
   start: Jan 2018
