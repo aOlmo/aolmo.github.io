@@ -5,11 +5,13 @@
   "publications": [
     {
       "title": "Planbench: An extensible benchmark for evaluating large language models on planning and reasoning about change",
-      "authors": "K Valmeekam, M Marquez, A Olmo, S Sreedharan, S Kambhampati",
+      "authors": "Karthik Valmeekam, Matthew Marquez, Alberto Olmo, S. Sreedharan, Subbarao Kambhampati",
       "venue": "Advances in Neural Information Processing Systems 36, 38975-38987",
       "year": 2023,
       "citations": 663,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:zYLM7Y9cAGgC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:zYLM7Y9cAGgC",
+      "paper_url": "https://doi.org/10.52202/075280-1693",
+      "pdf_url": "https://arxiv.org/pdf/2206.10498"
     },
     {
       "title": "Large language models still can't plan (a benchmark for LLMs on planning and reasoning about change)",
@@ -21,59 +23,72 @@
     },
     {
       "title": "On the planning abilities of large language models (a critical investigation with a proposed benchmark)",
-      "authors": "K Valmeekam, S Sreedharan, M Marquez, A Olmo, S Kambhampati",
+      "authors": "Karthik Valmeekam, S. Sreedharan, Matthew Marquez, Alberto Olmo, Subbarao Kambhampati",
       "venue": "arXiv preprint arXiv:2302.06706",
       "year": 2023,
       "citations": 149,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:W7OEmFMy1HYC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:W7OEmFMy1HYC",
+      "paper_url": "https://doi.org/10.48550/arXiv.2302.06706",
+      "pdf_url": "http://arxiv.org/pdf/2302.06706"
     },
     {
       "title": "Imperfect ImaGANation: Implications of GANs exacerbating biases on facial data augmentation and snapchat face lenses",
-      "authors": "N Jain, A Olmo, S Sengupta, L Manikonda, S Kambhampati",
+      "authors": "Niharika Jain, Alberto Olmo Hernandez, Sailik Sengupta, Lydia Manikonda, Subbarao Kambhampati",
       "venue": "Artificial Intelligence 304, 103652",
       "year": 2022,
       "citations": 133,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:eQOLeE2rZwMC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:eQOLeE2rZwMC",
+      "paper_url": "https://doi.org/10.1016/j.artint.2021.103652",
+      "pdf_url": "https://doi.org/10.1016/j.artint.2021.103652"
     },
     {
       "title": "Gpt3-to-plan: Extracting plans from text using gpt-3",
-      "authors": "A Olmo, S Sreedharan, S Kambhampati",
+      "authors": "Alberto Olmo, S. Sreedharan, S. Kambhampati",
       "venue": "ICAPS Knowledge Engineering for Planning and Scheduling - 2021",
       "year": 2021,
       "citations": 84,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:qjMakFHDy7sC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:qjMakFHDy7sC",
+      "paper_url": "https://doi.org/10.48550/arXiv.2106.07131",
+      "pdf_url": "https://arxiv.org/pdf/2106.07131"
     },
     {
       "title": "Model-free model reconciliation",
-      "authors": "S Sreedharan, A Olmo, AP Mishra, S Kambhampati",
+      "authors": "S. Sreedharan, Alberto Olmo Hernandez, A. Mishra, S. Kambhampati",
       "venue": "Proceedings of the Twenty-Eighth International Joint Conference on …",
       "year": 2019,
       "citations": 52,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:YsMSGLbcyi4C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:YsMSGLbcyi4C",
+      "paper_url": "https://doi.org/10.48550/arXiv.1903.07198",
+      "pdf_url": "https://www.ijcai.org/proceedings/2019/0083.pdf"
     },
     {
       "title": "Towards understanding user preferences for explanation types in model reconciliation",
-      "authors": "Z Zahedi, A Olmo, T Chakraborti, S Sreedharan, S Kambhampati",
+      "authors": "Z. Zahedi, Alberto Olmo, Tathagata Chakraborti, S. Sreedharan, S. Kambhampati",
       "venue": "2019 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI …",
       "year": 2019,
       "citations": 32,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:IjCSPb-OGe4C"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:IjCSPb-OGe4C",
+      "paper_url": "https://doi.org/10.1109/HRI.2019.8673097"
     },
     {
       "title": "Physics-driven convolutional autoencoder approach for CFD data compressions",
-      "authors": "A Olmo, A Zamzam, A Glaws, R King",
+      "authors": "Alberto Olmo, A. Zamzam, A. Glaws, Ryan N. King",
       "venue": "NeurIPS Machine Learning and the Physical Sciences Workshop - 2022",
       "year": 2022,
       "citations": 11,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:Y0pCki6q_DkC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:Y0pCki6q_DkC",
+      "paper_url": "https://arxiv.org/abs/2210.09262",
+      "pdf_url": "https://arxiv.org/pdf/2210.09262"
     },
     {
       "title": "Not all failure modes are created equal: Training deep neural networks for explicable (mis) classification",
-      "authors": "A Olmo, S Sengupta, S Kambhampati",
+      "authors": "Alberto Olmo Hernandez, Sailik Sengupta, S. Kambhampati",
       "venue": "ICML, 2020 (Uncertainty and Robustness in Deep Learning)",
       "year": 2020,
       "citations": 9,
-      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:UeHWp8X0CEIC"
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:UeHWp8X0CEIC",
+      "paper_url": "https://doi.org/10.48550/arXiv.2006.14841",
+      "pdf_url": "https://arxiv.org/pdf/2006.14841"
     },
     {
       "title": "Analyzing Failure Modes of Inscrutable Machine Learning Models",
