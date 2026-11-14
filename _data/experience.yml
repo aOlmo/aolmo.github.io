@@ -1,15 +1,33 @@
-# `description` may contain HTML links.
+# Newest first. `description` may contain HTML links.
+# `logo` is an image path; entries without one show `initials` in a small tile.
+- title: Data Scientist & Scrum Leader @ Vianai Systems
+  start: Jan 2023
+  end: May 2026
+  logo: /assets/imgs/vianai-logo.png
+  logo_dark: true
+  description: >-
+    Built backend features and platform improvements for Vianai's AI financial assistant,
+    making it smoother to use and more context-aware: removing unnecessary alerts in favour
+    of more accurate fallback responses, selecting the right data source automatically,
+    making the context-based conversational Q&amp;A more reliable, and letting clients
+    preload conversations for specific users and roles and register their own custom
+    questions. As Scrum leader, also drove feature planning, tracking and progress reporting
+    through to delivery. Tech: Python, Snowflake, OpenSearch, ClickHouse, Kubernetes.
+
 - title: Machine Learning Research Intern @ National Laboratory of the Rockies (former NREL)
+  initials: NLR
   start: May 2022
   end: Aug 2022
   description: Researched and improved the explainability of machine learning models for data flows, and studied how prone they are to producing biased predictions.
 
 - title: Business Analytics/Statistics Intern @ University of Phoenix
+  initials: UoPX
   start: May 2021
   end: Aug 2021
   description: I worked as a business analyst applying machine learning algorithms to model and categorize user-segmentation-related tasks with graph and tabular data.
 
 - title: Graduate Research Assistant @ ASU
+  logo: /assets/imgs/asu-logo.png
   start: Aug 2018
   end: Dec 2022
   description: >-
@@ -23,6 +41,7 @@
     visible in Snapchat face lenses.
 
 - title: Graduate Research Assistant @ UAB
+  logo: /assets/imgs/uab-logo-border-transp.png
   start: Jan 2018
   end: Jun 2018
   description: >-
@@ -31,6 +50,7 @@
     (MATE) software at Universitat Autònoma de Barcelona.
 
 - title: Front-End Developer @ Delectatech
+  initials: D
   start: Jan 2016
   end: Jun 2016
   description: I worked as a front-end developer in AngularJS, Javascript, HTML5 and CSS3. Work developed under Scrum's Agile principles.
