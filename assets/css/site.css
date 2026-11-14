@@ -40,7 +40,7 @@ img { max-width: 100%; }
 
 .wrap { max-width: 760px; margin: 0 auto; padding: 72px 24px 96px; }
 /* Laptops and larger: use more of the screen. Phones and tablets keep 760px. */
-@media (min-width: 1024px) { .wrap { max-width: 960px; } }
+@media (min-width: 1024px) { .wrap { max-width: 940px; } }
 
 /* ---- Header ---- */
 
