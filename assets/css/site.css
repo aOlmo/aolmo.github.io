@@ -99,27 +99,24 @@ section p:last-child { margin-bottom: 0; }
 .grow { flex: 1; }
 .edu.has-desc { align-items: flex-start; }
 
-/* Experience entries: logo (or lettered tile) on the left */
-.with-logo { display: flex; gap: 14px; align-items: flex-start; }
-.with-logo .logo {
-  width: 44px;
-  height: 44px;
-  flex: none;
-  margin-top: 2px;
-  border-radius: 10px;
-}
-.with-logo img.logo { padding: 4px; background: var(--logo-bg); object-fit: contain; }
-.with-logo img.logo-full { padding: 0; background: none; box-shadow: 0 0 0 1px var(--line); }
+/* Experience entries reuse the education row (.edu): logo left of title and company.
+   `logo-full` logos have their own background, so they fill the tile edge to edge. */
+.edu img.logo-full { padding: 0; background: none; }
 .logo-tile {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
   border: 1px solid var(--line);
+  border-radius: 10px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
+.edu + .desc { margin-top: 8px; }
 
 .edu { display: flex; gap: 14px; align-items: center; }
 .edu img {

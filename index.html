@@ -37,17 +37,19 @@ layout: default
   <div>
     {%- for x in site.data.experience %}
     {%- assign parts = x.title | split: " @ " %}
-    <div class="item with-logo">
-      {%- if x.logo %}
-      <img class="logo{% if x.logo_full %} logo-full{% endif %}" src="{{ x.logo }}" alt="{{ parts[1] }} logo" width="44" height="44">
-      {%- else %}
-      <span class="logo logo-tile" aria-hidden="true">{{ x.initials }}</span>
-      {%- endif %}
-      <div class="grow">
-        <div class="item-head"><span class="item-title">{{ parts[0] }}</span><span class="date">{{ x.start }} – {{ x.end }}</span></div>
-        <div class="org">{{ parts[1] }}</div>
-        <div class="desc">{{ x.description }}</div>
+    <div class="item">
+      <div class="edu">
+        {%- if x.logo %}
+        <img class="{% if x.logo_full %}logo-full{% endif %}" src="{{ x.logo }}" alt="{{ parts[1] }} logo" width="44" height="44">
+        {%- else %}
+        <span class="logo-tile" aria-hidden="true">{{ x.initials }}</span>
+        {%- endif %}
+        <div class="grow">
+          <div class="item-head"><span class="item-title">{{ parts[0] }}</span><span class="date">{{ x.start }} – {{ x.end }}</span></div>
+          <div class="org">{{ parts[1] }}</div>
+        </div>
       </div>
+      <div class="desc">{{ x.description }}</div>
     </div>
     {%- endfor %}
   </div>
