@@ -97,6 +97,7 @@ section p:last-child { margin-bottom: 0; }
 .org { color: var(--muted); }
 .desc { margin-top: 4px; }
 .grow { flex: 1; }
+.edu.has-desc { align-items: flex-start; }
 
 .edu { display: flex; gap: 14px; align-items: center; }
 .edu img {

@@ -18,11 +18,14 @@ layout: default
   <h2>Education</h2>
   <div>
     {%- for s in site.data.education %}
-    <div class="item edu">
+    <div class="item edu{% if s.description %} has-desc{% endif %}">
       <img src="{{ s.logo }}" alt="{{ s.school }} logo" width="44" height="44">
       <div class="grow">
         <div class="item-head"><span class="item-title">{{ s.school }}</span><span class="date">{{ s.years | replace: " - ", " – " }}</span></div>
         <div class="org">{{ s.degree }}</div>
+        {%- if s.description %}
+        <div class="desc">{{ s.description }}</div>
+        {%- endif %}
       </div>
     </div>
     {%- endfor %}
