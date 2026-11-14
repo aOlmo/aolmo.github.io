@@ -17,7 +17,11 @@
   logo_full: true
   start: May 2022
   end: Aug 2022
-  description: Researched and improved the explainability of machine learning models for data flows, and studied how prone they are to producing biased predictions.
+  description: >-
+    Developed physics-informed autoencoders to compress large turbulent-flow (CFD) simulation data.
+    Adding physics-based regularizations, such as enforcing incompressibility and preserving
+    enstrophy, made the compressed data more physically faithful without hurting reconstruction
+    quality, made the model easier to explain, and sped up training by up to 12x.
 
 - title: Business Analytics/Statistics Intern @ University of Phoenix
   logo: /assets/imgs/phoenix-tile.png

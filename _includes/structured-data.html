@@ -62,7 +62,12 @@
             {%- assign first = false -%}
           {%- endif -%}
         {%- endfor -%}
-        {%- if site.data.scholar.profile_url -%}
+        {%- comment %} Add the synced Scholar profile unless a link above already points to it. {% endcomment -%}
+        {%- assign scholar_listed = false -%}
+        {%- for link in site.data.links -%}
+          {%- if link.profile and site.data.scholar.user and link.url contains site.data.scholar.user %}{% assign scholar_listed = true %}{% endif -%}
+        {%- endfor -%}
+        {%- if site.data.scholar.profile_url and scholar_listed == false -%}
           {%- unless first %},{% endunless %}
         {{ site.data.scholar.profile_url | jsonify }}
         {%- endif %}

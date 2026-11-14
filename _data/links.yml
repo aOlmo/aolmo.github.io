@@ -2,7 +2,7 @@
 # `profile: true` marks your own accounts: they get rel="me" and are listed to
 # search engines as your profiles (structured data `sameAs`).
 - label: Google Scholar
-  url: https://scholar.google.com/citations?user=qIYCV4sAAAAJ&hl=en
+  url: https://scholar.google.es/citations?user=XsLi7CAAAAAJ&hl=es&oi=ao
   icon: graduation-cap
   profile: true
 - label: LinkedIn
