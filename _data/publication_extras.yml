@@ -1,5 +1,7 @@
 # Extra links shown next to synced Google Scholar publications.
 # `match` is a lowercase phrase that appears in the paper's Scholar title.
+# `paper` sets the main link by hand (for papers Semantic Scholar can't find);
+# `preprint` adds an arXiv link and `poster` a poster link.
 - match: exacerbating biases on facial data augmentation
   preprint: https://arxiv.org/pdf/2001.09528
   poster: /assets/files/imaganation_iclr_poster.pdf
@@ -13,3 +15,12 @@
 
 - match: not all failure modes are created equal
   poster: /assets/files/wlf_icml_poster.pdf
+
+- match: large language models still can't plan
+  paper: https://arxiv.org/abs/2206.10498
+
+- match: autoregressive density estimation in latent spaces
+  paper: https://www.proquest.com/openview/2d590fc9f66d3ed64ef47b83e8f35a6a/1?pq-origsite=gscholar&cbl=18750
+
+- match: extensió del plugin de sintonització
+  paper: https://ddd.uab.cat/pub/tfg/2016/tfg_39376/Extending_PTFs_MPI_Parameters_plugin_-_Alberto_Olmo.pdf
