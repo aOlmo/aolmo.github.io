@@ -1,28 +1,49 @@
-# `description` may contain HTML links.
+# Newest first. `description` may contain HTML links.
+# `logo` is an image path (`logo_full: true` for square logos with their own background);
+# entries without one show `initials` in a small tile.
+- title: Data Scientist & Scrum Leader @ Vianai Systems
+  start: Jan 2023
+  end: May 2026
+  logo: /assets/imgs/vianai-logo.png
+  logo_full: true
+  description: >-
+    Built backend features for Vianai's AI financial assistant to make it smoother to use and
+    more context-aware, from automatic data-source selection and more reliable conversational
+    Q&amp;A to client-configurable conversations and custom questions. As Scrum leader, drove
+    feature planning and delivery. Tech: Python, Snowflake, OpenSearch, ClickHouse, Kubernetes.
+
 - title: Machine Learning Research Intern @ National Laboratory of the Rockies (former NREL)
+  logo: /assets/imgs/nlr-tile.png
+  logo_full: true
   start: May 2022
   end: Aug 2022
-  description: Researched and improved the explainability of machine learning models for data flows, and studied how prone they are to producing biased predictions.
+  description: >-
+    Developed physics-informed autoencoders to compress large turbulent-flow (CFD) simulation data.
+    Adding physics-based regularizations, such as enforcing incompressibility and preserving
+    enstrophy, made the compressed data more physically faithful without hurting reconstruction
+    quality, made the model easier to explain, and sped up training by up to 12x.
 
 - title: Business Analytics/Statistics Intern @ University of Phoenix
+  logo: /assets/imgs/phoenix-tile.png
+  logo_full: true
   start: May 2021
   end: Aug 2021
   description: I worked as a business analyst applying machine learning algorithms to model and categorize user-segmentation-related tasks with graph and tabular data.
 
 - title: Graduate Research Assistant @ ASU
+  logo: /assets/imgs/asu-tile.png
+  logo_full: true
   start: Aug 2018
   end: Dec 2022
   description: >-
-    Researched when and why large deep learning models fail at the
-    <a href="https://yochan-lab.github.io/home/">Planning and Artificial Intelligence (Yochan) lab</a>,
+    Researched when and why large deep learning models fail, across large language models,
+    computer vision and automated planning, at the
+    <a href="https://yochan-lab.github.io/home/">Planning and Artificial Intelligence (Yochan) lab</a>
     under the supervision of Prof. <a href="http://rakaposhi.eas.asu.edu/">Subbarao Kambhampati</a>.
-    Highlights: <a href="https://doi.org/10.52202/075280-1693">PlanBench</a>, an extensible benchmark
-    showing that large language models still struggle to plan and to reason about change, and
-    <a href="https://doi.org/10.1016/j.artint.2021.103652">Imperfect ImaGANation</a>, which showed that
-    GAN-based data augmentation can amplify the biases already present in facial data, an effect also
-    visible in Snapchat face lenses.
 
 - title: Graduate Research Assistant @ UAB
+  logo: /assets/imgs/uab-tile.png
+  logo_full: true
   start: Jan 2018
   end: Jun 2018
   description: >-
@@ -30,7 +51,9 @@
     <a href="https://github.com/HPCA4SE-UAB/MATE">Monitoring Analysis and Tuning Environment</a>
     (MATE) software at Universitat Autònoma de Barcelona.
 
-- title: Front-End Developer @ Delectatech
-  start: Jan 2016
-  end: Jun 2016
-  description: I worked as a front-end developer in AngularJS, Javascript, HTML5 and CSS3. Work developed under Scrum's Agile principles.
+# Hidden for now; remove the leading "# " on the lines below to show it again.
+# - title: Front-End Developer @ Delectatech
+#   initials: D
+#   start: Jan 2016
+#   end: Jun 2016
+#   description: I worked as a front-end developer in AngularJS, Javascript, HTML5 and CSS3. Work developed under Scrum's Agile principles.
