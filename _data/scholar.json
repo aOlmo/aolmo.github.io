@@ -1,14 +1,14 @@
 {
   "user": "XsLi7CAAAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=XsLi7CAAAAAJ&hl=en",
-  "updated": "2026-11-13",
+  "updated": "2026-11-15",
   "publications": [
     {
       "title": "Planbench: An extensible benchmark for evaluating large language models on planning and reasoning about change",
       "authors": "Karthik Valmeekam, Matthew Marquez, Alberto Olmo, S. Sreedharan, Subbarao Kambhampati",
       "venue": "Advances in Neural Information Processing Systems 36, 38975-38987",
       "year": 2023,
-      "citations": 663,
+      "citations": 664,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:zYLM7Y9cAGgC",
       "paper_url": "https://doi.org/10.52202/075280-1693",
       "pdf_url": "https://arxiv.org/pdf/2206.10498",
