@@ -1,14 +1,14 @@
 {
   "user": "XsLi7CAAAAAJ",
   "profile_url": "https://scholar.google.com/citations?user=XsLi7CAAAAAJ&hl=en",
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "publications": [
     {
       "title": "Planbench: An extensible benchmark for evaluating large language models on planning and reasoning about change",
       "authors": "Karthik Valmeekam, Matthew Marquez, Alberto Olmo, S. Sreedharan, Subbarao Kambhampati",
       "venue": "Advances in Neural Information Processing Systems 36, 38975-38987",
       "year": 2023,
-      "citations": 664,
+      "citations": 665,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:zYLM7Y9cAGgC",
       "paper_url": "https://doi.org/10.52202/075280-1693",
       "pdf_url": "https://arxiv.org/pdf/2206.10498",
@@ -19,7 +19,7 @@
       "authors": "K Valmeekam, A Olmo, S Sreedharan, S Kambhampati",
       "venue": "NeurIPS 2022 Foundation Models for Decision Making Workshop",
       "year": 2022,
-      "citations": 614,
+      "citations": 612,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:2osOgNQ5qMEC"
     },
     {
@@ -27,7 +27,7 @@
       "authors": "Karthik Valmeekam, S. Sreedharan, Matthew Marquez, Alberto Olmo, Subbarao Kambhampati",
       "venue": "arXiv preprint arXiv:2302.06706",
       "year": 2023,
-      "citations": 149,
+      "citations": 150,
       "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=XsLi7CAAAAAJ&pagesize=100&citation_for_view=XsLi7CAAAAAJ:W7OEmFMy1HYC",
       "paper_url": "https://doi.org/10.48550/arXiv.2302.06706",
       "pdf_url": "http://arxiv.org/pdf/2302.06706",
